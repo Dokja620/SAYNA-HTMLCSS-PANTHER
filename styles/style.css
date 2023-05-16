@@ -1,3 +1,7 @@
+/*variable for the colors*/
+:root{
+    --general: #021740;
+}
 /*first thing first let's incorporate the fonts*/
 @font-face {
     font-family: 'Titre HA';
@@ -24,11 +28,12 @@
     list-style: none;
     box-sizing: border-box;
     /*rmv later*/
-    color: white;
 }
 /*former bgs remove this later*/
 body{
-    background: radial-gradient(#11213F 100%, #0B0B0B 100%, red);
+    background: url('/images/Allpages/arrière_plan.png') no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 /*nav bar*/
@@ -37,11 +42,127 @@ nav{
     height: 100px;
     background-color: red;
 }
-
 .colab img{
-    line-height: 80px;
-    padding: 0 1%;
+    float: left;
+    padding: 30px 2%;
 }
 .nav ul li{
     float: right;
+    padding: 34px 2%;
+}
+
+/*style*/
+.biographie{
+    width: 30%;
+    PADDING: 15% 0 0 5%;
+}
+#hommage{
+    background: url('/images/Accueil/Pantherhome1..png') no-repeat;
+    background-position: right;
+    background-size: 70%;
+    height: 100vh;
+}
+
+/*characters section*/
+.bg, .buste{
+    display: flex;
+}
+.bg{
+    background-color: var(--general);
+    height: 360px;
+    margin: 0 0 0 5%;
+}
+.buste img{
+    height: 100%;
+}
+/*biograophie section*/
+#hommage2{
+    margin: 2% 10%;
+}
+.partI{
+    display: flex;
+}
+.autobio{
+    text-align: justify;
+}
+.description{
+    margin-top: 40%;
+    color: var(--general);
+    background: white;
+    position: relative;
+    width: 75%;
+    border-radius: 10px;
+    padding: 10;
+}
+.portrait{
+    position: absolute;
+    top: -30%;
+    text-align: center;
+}
+.portrait img{
+    width: 80%;
+}
+.description2{
+    padding: 70% 10% 15% 10%;
+}
+    /*The button like stuff*/
+    h5{
+        text-align: center;
+    }
+    .btn2{
+        display: flex;
+        justify-content: center;
+    }
+    h6{
+        background-color: #3D2DA6;
+        margin: 6% 2%;
+        color: white;
+        padding: 7px 10px;
+        border-radius: 5px;
+    }
+/*formulaire*/
+form{
+    margin: 10% auto;
+    text-align: center;
+    background: linear-gradient(to bottom, white, transparent);
+    width: 500px;
+    border-radius: 60px;
+}
+input{
+    background: none;
+    margin: 1% 0;
+    width: 70%;
+    border: 2px solid var(--general);
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+.sms{
+    height: 200px;
+}
+input:focus{
+    outline: none;
+}
+
+/*footer section*/
+.foot{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+.img1{
+    position: relative;
+}
+.img2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.section1{
+    display: flex;
+    gap: 40%;
+}
+.section2 ul{
+    display: flex;
+    margin-top: 5%;
 }
