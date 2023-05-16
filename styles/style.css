@@ -28,10 +28,20 @@
 }
 /*former bgs remove this later*/
 body{
-    background: black url();
+    background: radial-gradient(#11213F 100%, #0B0B0B 100%, red);
 }
 
 /*nav bar*/
 nav{
-    display: flex;
+    width: auto;
+    height: 100px;
+    background-color: red;
+}
+
+.colab img{
+    line-height: 80px;
+    padding: 0 1%;
+}
+.nav ul li{
+    float: right;
 }
