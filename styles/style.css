@@ -1,0 +1,37 @@
+/*first thing first let's incorporate the fonts*/
+@font-face {
+    font-family: 'Titre HA';
+    src: url(/fonts/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url(/fonts/BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url(/fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+    font-family: 'texte';
+    src: url(/fonts/Cantarell-Regular.ttf);
+}
+
+/*...then let's reset the default styles*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /*rmv later*/
+    color: white;
+}
+/*former bgs remove this later*/
+body{
+    background: black url();
+}
+
+/*nav bar*/
+nav{
+    display: flex;
+}
