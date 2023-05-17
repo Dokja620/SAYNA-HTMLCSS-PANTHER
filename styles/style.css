@@ -239,6 +239,3 @@ input:focus{
     display: flex;
     margin-top: 5%;
 }
-
-/*stylesheets for the second page*/
-@import url("/styles/enigme.css");
