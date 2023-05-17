@@ -1,11 +1,13 @@
 /*variable for the colors*/
 :root{
     --general: #021740;
+    --pinky: #9E91B7;
+    --button: #F2CEF2;
 }
 /*first thing first let's incorporate the fonts*/
 @font-face {
-    font-family: 'Titre HA';
-    src: url(/fonts/PantheraRegular-MVZ9J.ttf);
+    font-family: 'Titre H1';
+    src: url(/fonts/panthera.otf);
 }
 @font-face {
     font-family: 'Titre H2';
@@ -19,12 +21,50 @@
     font-family: 'texte';
     src: url(/fonts/Cantarell-Regular.ttf);
 }
-
+    /*fonts of each elements... we'll use em instead of px so that It will be easier to make it responsive*/
+    .nav ul li{
+        font-family: 'Titre H2';
+        font-size: 2.6em;
+    }
+    h1{
+        font-family: 'Titre H1';
+        font-size: 5.6em;
+        color: var(--pinky);
+    }
+    h2{
+        font-family: 'Titre H2';
+        font-size: 2.6em;
+        color: var(--pinky);
+    }
+    p, li{
+        font-family: 'texte';
+        font-size: 1.3em;
+    }
+    q{
+        font-family: 'texte';
+        font-size: 1.1em;
+    }       
+    h3{
+        font-family: 'texte';
+        font-size: 4em;   
+    }
+    .btn{
+        font-family: 'texte';
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    h4{
+        font-family: 'texte';
+        font-size: 1.8em;
+        
+    }
 /*...then let's reset the default styles*/
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
     list-style: none;
     box-sizing: border-box;
     /*rmv later*/
@@ -33,6 +73,7 @@
 body{
     background: url('/images/Allpages/arrière_plan.png') no-repeat;
     background-size: cover;
+    font-size: 12px;
     color: white;
 }
 
@@ -40,7 +81,6 @@ body{
 nav{
     width: auto;
     height: 100px;
-    background-color: red;
 }
 .colab img{
     float: left;
@@ -50,7 +90,9 @@ nav{
     float: right;
     padding: 34px 2%;
 }
-
+a{
+    color: white;
+}
 /*style*/
 .biographie{
     width: 30%;
@@ -59,7 +101,7 @@ nav{
 #hommage{
     background: url('/images/Accueil/Pantherhome1..png') no-repeat;
     background-position: right;
-    background-size: 70%;
+    background-size: 60%;
     height: 100vh;
 }
 
@@ -75,9 +117,13 @@ nav{
 .buste img{
     height: 100%;
 }
+.text{
+    margin: 2%;
+    text-align: justify;
+}
 /*biograophie section*/
 #hommage2{
-    margin: 2% 10%;
+    margin: 5% 5% 5% 10%;
 }
 .partI{
     display: flex;
@@ -86,13 +132,16 @@ nav{
     text-align: justify;
 }
 .description{
-    margin-top: 40%;
+    margin: 40% auto 0 auto;
     color: var(--general);
     background: white;
     position: relative;
     width: 75%;
     border-radius: 10px;
     padding: 10;
+}
+.second, .third{
+    padding-top: 2%;
 }
 .portrait{
     position: absolute;
@@ -103,11 +152,17 @@ nav{
     width: 80%;
 }
 .description2{
-    padding: 70% 10% 15% 10%;
+    padding: 70% 5% 15% 5%;
+}
+.panther{
+    margin: 5% 0;
 }
     /*The button like stuff*/
     h5{
         text-align: center;
+        font-weight: bold; 
+        font-size: 2.5em; 
+        font-family: 'texte';
     }
     .btn2{
         display: flex;
@@ -121,17 +176,25 @@ nav{
         border-radius: 5px;
     }
 /*formulaire*/
+    /*fromulaire bg*/
+    #formulaire{
+        background: url(/images/Accueil/Pantherhome7.png) no-repeat;
+        background-size: cover;
+    }
 form{
     margin: 10% auto;
+    padding: 5% 0;
     text-align: center;
     background: linear-gradient(to bottom, white, transparent);
-    width: 500px;
+    width: 600px;
     border-radius: 60px;
+    color: var(--general);
 }
 input{
     background: none;
     margin: 1% 0;
-    width: 70%;
+    width:  520px;
+    height: 56px;
     border: 2px solid var(--general);
     border-radius: 20px;
     padding: 10px 10px;
@@ -142,7 +205,17 @@ input{
 input:focus{
     outline: none;
 }
-
+    /*real button*/
+    .btn{
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 38px;
+        margin: auto;
+        background-color: var(--button);
+    }
+    .btn a{
+        color: var(--general);
+    }
 /*footer section*/
 .foot{
     display: flex;
@@ -166,3 +239,6 @@ input:focus{
     display: flex;
     margin-top: 5%;
 }
+
+/*stylesheets for the second page*/
+@import url("/styles/enigme.css");
