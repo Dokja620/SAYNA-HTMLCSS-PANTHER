@@ -37,7 +37,7 @@
         font-size: 2.6em;
         color: var(--pinky);
     }
-    p, li{
+    p, li, ::placeholder{
         font-family: 'texte';
         font-size: 1.3em;
     }
@@ -76,6 +76,7 @@ body{
     background-size: cover;
     font-size: 12px;
     color: white;
+    overflow-x: hidden;
 }
 /*the vertical mediasocial stuff*/
 .soc{
@@ -91,7 +92,7 @@ body{
     background-color: var(--pinky);
 }
 .lines{
-    width: 4px;
+    width: 3px;
     height: 250px;
     margin-left: 10px;
     background-color: var(--pinky);
@@ -106,36 +107,41 @@ body{
 .social2 img:hover{
     filter: brightness(0) invert(1);
 }
-/*nav bar*/
-nav{
-    width: auto;
-    height: 100px;
+/*navbar style*/
+.navbar{
+    padding: 30px 2% 0 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
 }
-.colabimg{
-    float: left;
-    padding: 30px 5%;
+.navbar a{
+    color: white;
 }
-.colabimg img{
-    transition: .3s all ease-in-out;
+.navbar .nav ul{
+    display: flex;
 }
-.colabimg img:hover{
-    filter: grayscale(100%) brightness(70%) sepia(15%) hue-rotate(-100deg) saturate(400%) contrast(1);
+.navbar .nav ul li{
+    margin: 0 10px;
 }
-.nav ul li{
-    float: right;
-    padding: 34px 5%;
-}
-.nav a.active{
-    color: var(--violet);
+a.active{
+    color: var(--pinky);
 }
 a{
-    color: white;
-    transition: 0.25s ease-out;
+    transition: .25s all ease-in-out;
 }
 a:hover{
-    color: var(--violet);
+    color: var(--pinky);
 }
-    /*hover animation*/
+.navbar .menu-burger{
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 35px;
+}
+    /* hover underline animation */
     .hover-underline-animation {
         display: inline-block;
         position: relative;
@@ -148,7 +154,7 @@ a:hover{
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: var(--violet);
+        background-color: var(--pinky);
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
@@ -156,7 +162,53 @@ a:hover{
         transform: scaleX(1);
         transform-origin: bottom left;
       }
-/*style*/
+        /*responsive navbar*/
+        @media screen and (max-width:800px) {
+            .navbar{
+                padding: 0;
+            }
+            .logo{
+                position: absolute;
+                top: 50px;
+                left: 10%;
+            }
+            .nav.mobile-menu{
+                margin-left: 0;
+            }
+            .nav{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(102, 51, 153, 0.104);
+                backdrop-filter: blur(3px);
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: -100%;
+                transition: all 0.5s ease;
+            }
+            .nav ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar .menu-burger{
+                display: block;
+            }
+            .navbar .nav ul li{
+                margin: 20px 0;
+            }
+            a{
+                transition: .3s all ease-in-out;
+            }
+            a:hover{
+                transform: scale(1.1);
+            }
+        }
+
+/*first section... Black panther introduction*/
 .biographie{
     width: 30%;
     PADDING: 15% 0 0 5%;
@@ -169,25 +221,31 @@ a:hover{
     height: 100vh;
 }
 
-/*characters section*/
-.bg, .buste{
+/*characters section... killmonger, okoye and juri*/
+#characters{
+    margin-left: 5%;
+}
+.buste{
     display: flex;
 }
 .bg{
+    display: flex;
     background-color: var(--general);
-    height: 306px;
-    margin: 0 0 0 5%;
-    position: relative;
+    height: 40vh;
+    width: 100%;
 }
-.princess{
-    overflow: hidden;
-}
-.anta img{
-    scale: 1.1;
-    margin-left: 50px;
+.buste{
+    width: AUTO;
 }
 .buste img{
     height: 100%;
+    transition: .3s all ease-in-out;
+}
+.buste img:hover{
+    transform: scale(1.1);
+}
+.anta{
+    padding-left: 5%;
 }
 .text{
     margin: 4%;
@@ -210,7 +268,7 @@ a:hover{
     position: relative;
     width: 75%;
     border-radius: 10px;
-    padding: 10;
+    padding: AUTO;
 }
 .second, .third{
     padding-top: 2%;
@@ -247,44 +305,63 @@ a:hover{
         padding: 7px 10px;
         border-radius: 5px;
     }
+        /*responsive of this second section*/
+        @media screen and (max-width: 800px) {
+            .partI{
+                display: block;
+            }
+            .portrait{
+                top: -20%;
+            }
+            .panther img{
+                width: 100%;
+            }
+        }
 /*formulaire*/
     /*fromulaire bg*/
     #formulaire{
         background: url(/images/Accueil/Pantherhome7.png) no-repeat;
         background-size: cover;
-        height: 80vh;
+        height: 100vh;
     }
 form{
     margin: 10% auto;
     padding: 1% 0;
     text-align: center;
     background: linear-gradient(to bottom, white, transparent);
-    width: 600px;
+    width: 60%;
     border-radius: 60px;
     color: var(--general);
 }
-input{
+input, textarea{
     background: none;
     margin: 1% 0;
-    width:  520px;
+    width: 55%;
     height: 56px;
     border: 2px solid var(--general);
     border-radius: 20px;
     padding: 10px 10px;
 }
-.sms{
+textarea{
     height: 200px;
 }
-input:focus{
+input:focus, textarea:focus{
     outline: none;
+}
+::placeholder{
+    color: var(--general);
 }
     /*real button*/
     .btn{
         width: 150px;
         padding: 10px 0;
         border-radius: 38px;
-        margin: auto;
+        margin: 3% auto;
+        transition: .25s all ease-in-out;
         background-color: var(--button);
+    }
+    .btn:hover{
+        filter: drop-shadow(0 0 10px #021740);
     }
     .btn a{
         color: var(--general);
@@ -310,8 +387,12 @@ footer{
     left: 45%;
     transform: translate(-45%, -45%);
 }
-.img1 img, .img2 img{
+.img1:hover img{
+    transform: scale(1.1);
+}
+.img1 img{
     width: 80%;
+    transition: .25s all ease-in-out;
 }
 .section1{
     display: flex;
@@ -334,3 +415,12 @@ footer{
 .media img:hover{
     transform: scale(1.1);
 }
+
+        /*responsive footer*/
+        @media screen and (max-width: 800px) {
+            .foot{
+                display: block;
+                padding: 5% 5% 0 5%;
+                margin: auto;
+            }
+        }

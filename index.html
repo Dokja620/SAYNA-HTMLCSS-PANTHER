@@ -9,21 +9,22 @@
 </head>
 <body>
 <header>
-    <nav>
-        <div class="colab">
-            <div class="colabimg">
+    <nav class="navbar">
+        <div class="logo">
+            <div class="log-x-m">
                 <img src="/images/Allpages/icon_SAYNA.png" alt="">
                 <img src="/images/Allpages/icon_x.png" alt="" style="padding-bottom: 10px;">
                 <img src="/images/Allpages/icon_MARVEL.png" alt="">
             </div>
         </div>
-        <div class="nav">
+        <div class="nav mobile-menu">
             <ul>
                 <li><a href="index.html" class="hover-underline-animation active">ACCEUIL</a></li>
                 <li><a href="/pages/wakanda.html" class="hover-underline-animation">WAKANDA</a></li>
                 <li><a href="/pages/enigme.html" class="hover-underline-animation">ENIGME</a></li>
             </ul>
         </div>
+        <img src="/images/Allpages/menu.png" alt="menu hamburger" class="menu-burger">
     </nav>
 </header>
 <main>
@@ -236,7 +237,7 @@
             <div class="inputs">
                 <input type="text" placeholder="Nom"> <br>
                 <input type="email" placeholder="Email"> <br>
-                <input type="text" placeholder="Message" class="sms"> <br>
+                <textarea name="Message" id="" cols="30" rows="10" placeholder="Messages"></textarea>
                 <div class="btn">
                     <a href="">ENVOYER</a>
                 </div>
@@ -288,4 +289,12 @@
     </div>
 </footer>
 </body>
+<script>
+    const menuHamburger = document.querySelector(".menu-burger")
+    const navLinks = document.querySelector(".nav")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
 </html>
