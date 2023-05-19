@@ -78,6 +78,27 @@ body{
     color: white;
     overflow-x: hidden;
 }
+    /*now let's make those fonts responsive*/
+    @media screen and (max-width: 800px) {
+        body{
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        body{
+            font-size: 8px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        body{
+            font-size: 6px;
+        }
+    }
+    @media screen and (max-width: 200px) {
+        body{
+            font-size: 4px;
+        }
+    }
 /*the vertical mediasocial stuff*/
 .soc{
     position: fixed;
