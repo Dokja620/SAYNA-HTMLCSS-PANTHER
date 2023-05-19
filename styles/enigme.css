@@ -105,6 +105,11 @@ a{
     PADDING: 15% 0 0 5%;
     margin-left: 50%;
 }
+    /*stroke bg*/
+    .defi{
+        background: url('/images/Enigme/Pantherenigme3.png') bottom no-repeat;
+        
+    }
 .charade{
     background: url('/images/Enigme/Pantherenigme2.png') center no-repeat;
     background-size: 95%;
