@@ -78,27 +78,7 @@ body{
     color: white;
     overflow-x: hidden;
 }
-    /*now let's make those fonts responsive*/
-    @media screen and (max-width: 800px) {
-        body{
-            font-size: 10px;
-        }
-    }
-    @media screen and (max-width: 600px) {
-        body{
-            font-size: 8px;
-        }
-    }
-    @media screen and (max-width: 400px) {
-        body{
-            font-size: 6px;
-        }
-    }
-    @media screen and (max-width: 200px) {
-        body{
-            font-size: 4px;
-        }
-    }
+    
 /*the vertical mediasocial stuff*/
 .soc{
     position: fixed;
@@ -190,7 +170,7 @@ a:hover{
             }
             .logo{
                 position: absolute;
-                top: 50px;
+                top: 35px;
                 left: 10%;
             }
             .nav.mobile-menu{
@@ -243,9 +223,6 @@ a:hover{
 }
 
 /*characters section... killmonger, okoye and juri*/
-#characters{
-    margin-left: 5%;
-}
 .buste{
     display: flex;
 }
@@ -254,6 +231,9 @@ a:hover{
     background-color: var(--general);
     height: 40vh;
     width: 100%;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-top: 55%;
 }
 .buste{
     width: AUTO;
@@ -371,6 +351,7 @@ input:focus, textarea:focus{
 }
 ::placeholder{
     color: var(--general);
+    font-size: .8em;
 }
     /*real button*/
     .btn{
@@ -442,6 +423,150 @@ footer{
             .foot{
                 display: block;
                 padding: 5% 5% 0 5%;
-                margin: auto;
             }
         }
+        @media screen and (min-width: 800px) {
+            .tchalla{
+                width: 50%;
+            }
+        }
+        
+
+/*now let's make those fonts responsive*/
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 10px;
+    }
+    #hommage2{
+        margin: 5% 5% 5% 13%;
+    }
+    form{
+        margin: 10% auto;
+        padding: 1% 0;
+        width: 60%;
+    }
+    input, textarea{
+        margin: 1% 0;
+        width: 80%;
+        height: 40px;
+        border-radius: 20px;
+        padding: 10px 10px;
+    }
+    textarea{
+        height: 200px;
+    }
+    .img1{
+        text-align: center;
+        margin-bottom: 20%;
+    }
+    .section1{
+        justify-content: center;
+        width: 100vw;
+    }
+    .section2 ul{
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+    .img1 img{
+        width: 60%;
+    }
+    .media img{
+        width: 20%;
+    }
+    .btn{
+        width: 150px;
+        padding: 10px 0;
+    }
+    .section1{
+        width: 100%;
+    }
+    .biographie{
+        width: 35%;
+        PADDING: 15% 0 0 7%;
+        margin-left: 5%;
+    }
+    .logo{
+        padding-left: 5%;
+    }
+    #hommage{
+        background-position: bottom right;
+        background-size: 50%;
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    body{
+        font-size: 8px;
+    }
+    #hommage2{
+        margin: 5% 5% 5% 16%;
+    }
+    .btn{
+        width: 130px;
+        padding: 8px 0;
+    }
+    .navbar .menu-burger{
+        width: 30px;
+    }
+    .biographie{
+        width: 45%;
+        PADDING: 15% 0 0 12%;
+        margin-left: 5%;
+    }
+    .navbar{
+        MARGIN-bottom: 10%;
+    }
+    #hommage{
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 400px) {
+    body{
+        font-size: 6px;
+    }
+    #hommage2{
+        margin: 5% 5% 5% 21%;
+    }
+    form{
+        margin: 10% 0 0 20% ;
+        padding: 1% 0;
+        width: 70%;
+        border-radius: 30px;
+    }
+    input, textarea{
+        margin: 1% 0;
+        width: 80%;
+        height: 30px;
+        border-radius: 20px;
+        padding: 10px 10px;
+    }
+    textarea{
+        height: 200px;
+    }
+    .btn{
+        width: 150px;
+        padding: 10px 0;
+    }
+    .btn{
+        width: 35%;
+        padding: 6px 0;
+    }
+    .navbar .menu-burger{
+        width: 25px;
+    }
+    #hommage{
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 300px) {
+    body{
+        font-size: 5px;
+    }
+    
+    #hommage2{
+        margin: 5% 5% 5% 26%;
+    }
+    .navbar .menu-burger{
+        width: 20px;
+    }
+}
