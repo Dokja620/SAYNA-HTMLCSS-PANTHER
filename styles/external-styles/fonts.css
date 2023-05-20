@@ -1,0 +1,54 @@
+/*the fonts*/
+@font-face {
+    font-family: 'Titre H1';
+    src: url(/fonts/panthera.otf);
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url(/fonts/BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url(/fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+    font-family: 'texte';
+    src: url(/fonts/Cantarell-Regular.ttf);
+}
+    /*fonts of each elements... we'll use em instead of px so that It will be easier to make it responsive*/
+    .nav ul li{
+        font-family: 'Titre H2';
+        font-size: 2.6em;
+    }
+    h1{
+        font-family: 'Titre H1';
+        font-size: 5.6em;
+        color: var(--pinky);
+    }
+    h2{
+        font-family: 'Titre H2';
+        font-size: 2.6em;
+        color: var(--pinky);
+    }
+    p, li, ::placeholder{
+        font-family: 'texte';
+        font-size: 1.3em;
+    }
+    q{
+        font-family: 'texte';
+        font-size: 1.1em;
+    }       
+    h3{
+        font-family: 'texte';
+        font-size: 4em;   
+    }
+    .btn{
+        font-family: 'texte';
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    h4{
+        font-family: 'texte';
+        font-size: 1.8em;
+        letter-spacing: 4px;
+    }

@@ -1,0 +1,62 @@
+/*footer section... external one*/
+footer{
+    background: url('/images/Allpages/back_footer.png') no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+.img1{
+    position: relative;
+    margin-bottom: 20px;
+}
+.img2{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-45%, -45%);
+}
+.img1:hover img{
+    transform: scale(1.1);
+}
+.img1 img{
+    width: 80%;
+    transition: .25s all ease-in-out;
+}
+.section1{
+    display: flex;
+    gap: 35%;
+}
+.section2 ul{
+    display: flex;
+    margin-top: 5%;
+}
+.copyright ul li:before {
+    content:"•";
+}
+.social{
+    text-align: center;
+}
+.media img{
+    margin: 10% 2% 20% 2%;
+    transition: .3s all ease-in-out;
+}
+.media img:hover{
+    transform: scale(1.1);
+}
+
+        /*responsive footer*/
+        @media screen and (max-width: 900px) {
+            .foot{
+                display: block;
+                padding: 5% 5% 0 5%;
+            }
+        }
+        @media screen and (min-width: 900px) {
+            .tchalla{
+                width: 50%;
+            }
+        }

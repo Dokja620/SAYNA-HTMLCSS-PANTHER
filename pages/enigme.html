@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="/styles/enigme.css">
 </head>
 <body>
-<header>
-    <nav>
-        <div class="colab">
-            <img src="/images/Allpages/footer2.png" alt="">
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="index.html">ACCEUIL</a></li>
-                <li><a href="/pages/wakanda.html">WAKANDA</a></li>
-                <li><a href="/pages/enigme.html">ENIGME</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="log-x-m">
+                    <img src="/images/Allpages/icon_SAYNA.png" alt="">
+                    <img src="/images/Allpages/icon_x.png" alt="" style="padding-bottom: 10px;">
+                    <img src="/images/Allpages/icon_MARVEL.png" alt="">
+                </div>
+            </div>
+            <div class="nav mobile-menu">
+                <ul>
+                    <li><a href="index.html" class="hover-underline-animation">ACCEUIL</a></li>
+                    <li><a href="/pages/wakanda.html" class="hover-underline-animation">WAKANDA</a></li>
+                    <li><a href="/pages/enigme.html" class="hover-underline-animation active">ENIGME</a></li>
+                </ul>
+            </div>
+            <img src="/images/Allpages/menu.png" alt="menu hamburger" class="menu-burger">
+        </nav>
+    </header>
 <main>
     <section id="okoye">
         <div class="defi">
@@ -100,10 +105,12 @@
             <div class="section1">
                 <div class="pages">
                     <h4>PAGES</h4>
+                    <div style="margin-top: 30%;">
                     <p>
                         à propos <br>
                         Wakanda
                     </p>
+                    </div>
                 </div>
                 <div class="social">
                     <h4>RETROUVER NOUS</h4>
@@ -128,4 +135,12 @@
     </div>
 </footer>
 </body>
+<script>
+    const menuHamburger = document.querySelector(".menu-burger")
+    const navLinks = document.querySelector(".nav")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
 </html>

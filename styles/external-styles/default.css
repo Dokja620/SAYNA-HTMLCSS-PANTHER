@@ -1,0 +1,26 @@
+/*variable for the colors*/
+:root{
+    --general: #021740;
+    --pinky: #9E91B7;
+    --button: #F2CEF2;
+}
+
+/*...then let's reset the default styles*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    list-style: none;
+    box-sizing: border-box;
+    /*rmv later*/
+}
+
+/*former bgs remove this later*/
+body{
+    background: url('/images/Allpages/arrière_plan.png') no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    color: white;
+}

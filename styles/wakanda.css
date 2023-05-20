@@ -1,145 +1,23 @@
-/*variable for the colors*/
-:root{
-    --general: #021740;
-    --pinky: #9E91B7;
-    --button: #F2CEF2;
-}
-/*first thing first let's incorporate the fonts*/
-@font-face {
-    font-family: 'Titre H1';
-    src: url(/fonts/panthera.otf);
-}
-@font-face {
-    font-family: 'Titre H2';
-    src: url(/fonts/BEYNO.ttf);
-}
-@font-face {
-    font-family: 'Enigme';
-    src: url(/fonts/WakandaForever-Regular.ttf);
-}
-@font-face {
-    font-family: 'texte';
-    src: url(/fonts/Cantarell-Regular.ttf);
-}
-    /*fonts of each elements... we'll use em instead of px so that It will be easier to make it responsive*/
-    .nav ul li{
-        font-family: 'Titre H2';
-        font-size: 2.6em;
-    }
-    h1{
-        font-family: 'Titre H1';
-        font-size: 5.6em;
-        color: var(--pinky);
-    }
-    h2{
-        font-family: 'Titre H2';
-        font-size: 2.6em;
-        color: var(--pinky);
-    }
-    p, li{
-        font-family: 'texte';
-        font-size: 1.3em;
-    }
-    q{
-        font-family: 'texte';
-        font-size: 1.1em;
-    }       
-    h3{
-        font-family: 'texte';
-        font-size: 4em;   
-    }
-    .btn{
-        font-family: 'texte';
-        font-size: 1.1em;
-        font-weight: bold;
-    }
-    h4{
-        font-family: 'texte';
-        font-size: 1.8em;
-        
-    }
-/*...then let's reset the default styles*/
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-weight: normal;
-    font-style: normal;
-    list-style: none;
-    box-sizing: border-box;
-    /*rmv later*/
-}
+/*Same as the Homepage*/
+/*to avoid copy and paste the same styles*/
+@import "/styles/external-styles/navbar.css";
+@import "/styles/external-styles/fonts.css";
+@import "/styles/external-styles/footer.css";
+@import "/styles/external-styles/default.css";
 
-/*former bgs remove this later*/
-body{
-    background: url('/images/Allpages/arrière_plan.png') no-repeat;
+/*first section*/
+#city{
+    background: url('/images/Wakanda/Pantherwakanda1.jpg') 80% 20% no-repeat;
     background-size: cover;
-    font-size: 12px;
-    color: white;
+    height: 100vh;
 }
 
-/*nav bar*/
-nav{
-    width: auto;
-    height: 100px;
-}
-.colab img{
-    float: left;
-    padding: 30px 2%;
-}
-.nav ul li{
-    float: right;
-    padding: 34px 2%;
-}
-a{
-    color: white;
-}
-/*style*/
-
-/*formulaire*/
-input{
-    background: none;
-    margin: 1% 0;
-    width:  520px;
-    height: 56px;
-    border: 2px solid var(--general);
-    border-radius: 20px;
-    padding: 10px 10px;
-}
-input:focus{
-    outline: none;
-}
-    /*real button*/
-    .btn{
-        width: 150px;
-        padding: 10px 0;
-        border-radius: 38px;
-        margin: auto;
-        background-color: var(--button);
-    }
-    .btn a{
-        color: var(--general);
-    }
-/*footer section*/
-.foot{
+/*second section*/
+#origins{
     display: flex;
-    justify-content: center;
-    gap: 10%;
+    margin: 5% 2%;
+    text-align: justify;
 }
-.img1{
-    position: relative;
-}
-.img2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.section1{
-    display: flex;
-    gap: 40%;
-}
-.section2 ul{
-    display: flex;
-    margin-top: 5%;
+.leftpart, .rightpart{
+    margin: 0 2%;
 }
