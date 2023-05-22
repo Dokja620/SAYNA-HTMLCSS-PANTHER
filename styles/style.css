@@ -1,10 +1,20 @@
 /*I chosed to import those 'cause all the pages have the same styles.... so...*/
 /*to avoid copy and paste the same styles*/
-@import "/styles/external-styles/navbar.css";
-@import "/styles/external-styles/fonts.css";
-@import "/styles/external-styles/footer.css";
+
+/*first things first*/
 @import "/styles/external-styles/default.css";
-    
+/*then...*/
+@import "/styles/external-styles/navbar.css";
+/*...after that...*/
+@import "/styles/external-styles/fonts.css";
+/*...finaly*/
+@import "/styles/external-styles/footer.css";
+@import "/styles/external-styles/fadein.css";
+
+/*span reset fonts*/
+span{
+    font-family: 'texte';
+}
 /*the vertical mediasocial stuff*/
 .soc{
     position: fixed;
@@ -44,7 +54,7 @@
 #hommage{
     background: url('/images/Accueil/Pantherhome1..png') no-repeat;
     background-position: right;
-    background-size: 60%;
+    background-size: 55%;
     height: 100vh;
 }
 

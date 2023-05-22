@@ -1,0 +1,15 @@
+/*animation, the one who happen when we launch the page*/
+*{
+    animation: let-it-start 1s cubic-bezier(0.15, -0.55, 0.34, 0.94);
+}
+
+@keyframes let-it-start {
+    from{
+        transform: translateX(-50px);
+        opacity: .9;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

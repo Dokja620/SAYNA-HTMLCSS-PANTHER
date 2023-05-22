@@ -34,9 +34,6 @@ footer{
     display: flex;
     margin-top: 5%;
 }
-.copyright ul li:before {
-    content:"•";
-}
 .social{
     text-align: center;
 }
@@ -47,7 +44,17 @@ footer{
 .media img:hover{
     transform: scale(1.1);
 }
-
+.copyright{
+    display: flex;
+    align-items: center;
+}
+.point{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: var(--pinky);
+}
         /*responsive footer*/
         @media screen and (max-width: 900px) {
             .foot{

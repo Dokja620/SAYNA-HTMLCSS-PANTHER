@@ -23,4 +23,5 @@ body{
     background-size: cover;
     font-size: 12px;
     color: white;
+    overflow-x: hidden;
 }

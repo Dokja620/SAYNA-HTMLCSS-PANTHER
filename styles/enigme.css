@@ -1,15 +1,20 @@
 /*Same as the Homepage*/
 /*to avoid copy and paste the same styles*/
-@import "/styles/external-styles/navbar.css";
-@import "/styles/external-styles/fonts.css";
-@import "/styles/external-styles/footer.css";
+/*first things first*/
 @import "/styles/external-styles/default.css";
+/*then...*/
+@import "/styles/external-styles/navbar.css";
+/*...after that...*/
+@import "/styles/external-styles/fonts.css";
+/*...finaly*/
+@import "/styles/external-styles/footer.css";
+@import "/styles/external-styles/fadein.css";
 
 /*style warrior bg*/
 #okoye{
-    background: url('/images/Enigme/Pantherenigme1.jpg') left no-repeat;
+    background: url('/images/Enigme/Pantherenigme1.png') left no-repeat;
     background-size: 50%;
-    height: 100vh;
+    height: 100%;
 }
 .defi{
     width: 50%;
@@ -35,9 +40,6 @@
     margin: auto;
 }
 /*enigmatic textes*/
-span{
-    font-family: 'Enigme';
-}
 #enigme{
     margin: 0 0 0 15%;
     display: flex;

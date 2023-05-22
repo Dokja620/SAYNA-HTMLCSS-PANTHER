@@ -1,23 +1,63 @@
 /*Same as the Homepage*/
 /*to avoid copy and paste the same styles*/
-@import "/styles/external-styles/navbar.css";
-@import "/styles/external-styles/fonts.css";
-@import "/styles/external-styles/footer.css";
+/*first things first*/
 @import "/styles/external-styles/default.css";
+/*then...*/
+@import "/styles/external-styles/navbar.css";
+/*...after that...*/
+@import "/styles/external-styles/fonts.css";
+/*...finaly*/
+@import "/styles/external-styles/footer.css";
+@import "/styles/external-styles/fadein.css";
 
 /*first section*/
 #city{
-    background: url('/images/Wakanda/Pantherwakanda1.jpg') 80% 20% no-repeat;
+    background: url('/images/Wakanda/Pantherwakanda1.png') 80% 20% no-repeat;
     background-size: cover;
+    min-height: 300PX;
     height: 100vh;
 }
-
+.ever{
+    margin: 0 10%;
+    padding: 10% 0;
+}
+.ever-title{
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+.ever-title h1{
+    font-family: 'Titre H2';
+    font-size: 4em;
+}
+.ever-title h2{
+    word-spacing: 40px;
+}
+.ever-text{
+    width: 40%;
+    text-align: justify;
+}
+.ever-text p{
+    font-size: 1.2em;
+}
 /*second section*/
 #origins{
     display: flex;
     margin: 5% 2%;
     text-align: justify;
+    font-size: .9em;
 }
-.leftpart, .rightpart{
-    margin: 0 2%;
+.leftpart{
+    margin: 0 2% 0 5%;
+    width: 50%;
+} 
+.rightpart{
+    margin: 0 5% 0 2%;
+    width: 50%;
+}
+.vidéo{
+ margin: 5% 0;
+}
+/*right part of */
+.fifth img{
+    width: 100%;
 }
