@@ -55,3 +55,25 @@
     span{
         font-family: 'Enigme';
     }
+
+/*now let's make those fonts responsive*/
+@media screen and (max-width: 900px) {
+    body{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 700px) {
+    body{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 500px) {
+    body{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width: 300px) {
+    body{
+        font-size: 5px;
+    }
+}
