@@ -8,7 +8,7 @@
 @import "/styles/external-styles/fonts.css";
 /*...finaly*/
 @import "/styles/external-styles/footer.css";
-/* @import "/styles/external-styles/fadein.css"; */
+@import "/styles/external-styles/fadein.css";
 
 /*first section*/
 #city{
@@ -46,6 +46,7 @@
     margin: 5% 2%;
     text-align: justify;
     font-size: .9em;
+    background: url(/images/Wakanda/Pantherwakanda2.png) top center/90% no-repeat;
 }
 .leftpart{
     margin: 0 2% 0 5%;
@@ -85,8 +86,6 @@
     /*second section*/
     #origins{
         display: block;
-        text-align: justify;
-        font-size: .9em;
     }
     .leftpart{
         margin: 0;

@@ -9,7 +9,7 @@
 @import "/styles/external-styles/fonts.css";
 /*...finaly*/
 @import "/styles/external-styles/footer.css";
-/* @import "/styles/external-styles/fadein.css"; */
+@import "/styles/external-styles/fadein.css";
 /*span reset fonts*/
 span{
     font-family: 'texte';
@@ -66,18 +66,57 @@ span{
     background-color: var(--general);
     height: 40vh;
     width: 100%;
-    overflow: hidden;
     margin-left: 5%;
+    font-size: .8em;
+}
+/*bg font size*/
+@media screen and (max-width:1000px) {
+    .bg{
+        font-size: .7em;
+    }
+}
+@media screen and (max-width:900px) {
+    .bg{
+        display: block;
+        height: 100%;
+        width: 80%;
+        margin-left: 15%;
+        font-size: .8em;
+        background: transparent;
+    }
+    .buste{
+        height: 241PX;
+        padding: 10px;
+    }
+    .anta{
+        padding: 0;
+    }
+    .text{
+        padding: 15px;
+        background: linear-gradient(to right, #021740, transparent);
+    }
+    .princess{
+        padding: 0;
+        background: linear-gradient(to right, #021740, transparent);
+    }
+}
+@media screen and (max-width:700px) {
+    #hommage{
+        background-position: center;
+        background-size: 75%;
+    }
+    .intro{
+        padding-top:110%;
+    }
+    .intro div h1, h2{
+        line-height: 50px;
+    }
 }
 .buste{
     width: AUTO;
 }
 .buste img{
     height: 100%;
-    transition: .3s all ease-in-out;
-}
-.buste img:hover{
-    transform: scale(1.1);
 }
 .anta{
     padding-left: 5%;
@@ -192,19 +231,67 @@ input:focus, textarea:focus{
 }
     /*real button*/
     .btn{
+        text-align: center;
+    }
+    button{
         width: 150px;
         padding: 10px 0;
         border-radius: 38px;
         margin: 3% auto;
         transition: .25s all ease-in-out;
         background-color: var(--button);
+        border: none;
+        justify-content: center;
     }
-    .btn:hover{
+    button:hover{
         filter: drop-shadow(0 0 10px #021740);
-    }
-    .btn a{
         color: var(--general);
     }
+/*Popup*/
+/* .popup .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.popup .content{
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background: #FFF;
+    width: 150PX;
+    height: 150PX;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #3D2DA6;
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+    font-size: 27px;
+}
+.popup.active .overlay{
+    display: block;
+}
+.popup.active content{
+    transition: all 100ms ease-in-out;
+    transform: translate(-50%, -50%) scale(2);
+} */
 
 /*now let's make those fonts responsive*/
 @media screen and (max-width: 900px) {

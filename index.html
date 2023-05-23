@@ -116,7 +116,7 @@
                     </p>
                 </div>
             </div>
-            <div class="buste">
+            <div class="buste princess">
                 <div class="princess">
                     <img src="/images/Accueil/Pantherhome4.png" alt="">
                 </div>
@@ -239,10 +239,20 @@
                 <input type="email" placeholder="Email"> <br>
                 <textarea name="Message" id="" cols="30" rows="10" placeholder="Messages"></textarea>
                 <div class="btn">
-                    <a href="">ENVOYER</a>
+                    <button>ENVOYER</button>
                 </div>
             </div>
         </form>
+        <!-- <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn"  onclick="togglePopup()">&times;</div>
+                <h6>Merci!!</h6>
+                <p>
+                    Nous vous enverons un mail aussitôt que possible...
+                </p>
+            </div>
+        </div> -->
     </section>
 </main>
 <footer>
@@ -296,5 +306,8 @@
     menuHamburger.addEventListener('click',()=>{
     navLinks.classList.toggle('mobile-menu')
     })
+    // function togglePopup(){
+    //     document.getElementById("popup-1").classList.toggle("active")
+    // }
 </script>
 </html>

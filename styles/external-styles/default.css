@@ -14,7 +14,7 @@
     font-style: normal;
     list-style: none;
     box-sizing: border-box;
-    /*rmv later*/
+    scroll-behavior: smooth;
 }
 
 /*former bgs remove this later*/
