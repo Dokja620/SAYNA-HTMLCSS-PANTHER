@@ -12,9 +12,8 @@
 
 /*style warrior bg*/
 #okoye{
-    background: url('/images/Enigme/Pantherenigme1.png') left no-repeat;
-    background-size: 70%;
-    height: 100%;
+    background: url('/images/Enigme/Pantherenigme1.png') bottom left/100vh no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
+    height: 90vh;
 }
     /*custom fonts a bit different from the imported one*/
     .titre h1{
@@ -26,35 +25,37 @@
     PADDING: 15% 0 0 5%;
     margin-left: 50%;
 }
-    /*stroke bg*/
-    .defi{
-        background: url('/images/Enigme/Pantherenigme3.png') bottom no-repeat;
-    }
-.charade{
-    position: relative;
+.titre{
+    text-shadow: 2px 3px 5px rgb(0, 0, 0);
+    background: linear-gradient(to right,transparent, rgba(214, 9, 255, 0.104), transparent);
 }
-    /*bizarre  circles bg*/
-    .charade img{
-    width: 90%;
-    }
+.charade{
+    background: url(/images/Enigme/Pantherenigme2.png) center/90% no-repeat;
+    height: 100%;
+}
 .charade-text{
-    position: absolute;
     top: 0;
     left: 0;
     font-size: .9em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 .charade p{
-    padding-top: 20%;
     width: 71%;
     text-align: justify;
     font-size: 1.1em;
     margin: auto;
+    padding: 15% 0;
 }
+
 /*enigmatic textes*/
 #enigme{
-    margin: 5% 0 5% 15%;
+    margin: 10% 5%;
     display: flex;
     position: relative;
+}
+/*left part*/
+.guess{
+    width: 70%;
 }
 .guess1{
     color: var(--pinky);
@@ -65,13 +66,10 @@
     margin: 10% 0;
 }
 /*formulaire*/
-.answer{
-    width: 520px;
-}
 input{
     background: none;
     margin: 1% 0 5% 0;
-    width:  520px;
+    width:  100%;
     height: 56px;
     border: 2px solid var(--button);
     border-radius: 30px;
@@ -89,21 +87,96 @@ input:focus{
         background-color: var(--button);
         text-align: center;
         margin: auto;
+        transition: .5s all ease-in-out;
+    }
+    .btn:hover{
+        filter: drop-shadow(0 0 10px #F2CEF2);
     }
     .btn a{
         color: var(--general);
     }
+/*right part... le savais-tu?*/
 .did-you-know{
-    position: absolute;
-    background: url('/images/Enigme/Pantherenigme2.png') 10% no-repeat;
-    background-size: 90%;
-    height: 50vh;
-    width: 50%;
-    right: 0;
-}
-.did-you-know p{
-    padding-top: 21%;
-    padding-left: 10%;
-    width: 80%;
     text-align: center;
+    margin: auto 5%;
+    width: 50%;
+}
+.fact{
+    background: url('/images/Enigme/Pantherenigme2.png') center/100% no-repeat;
+    padding: 8%;
+    width: 100%;
+}
+
+/*responsive*/
+@media screen and (max-width: 1000px) and (min-width: 900px) {
+    .defi{
+        padding-top: 20%;
+        width: 75%;
+        margin-left: 20%;
+    }
+    .charade-text{
+        margin-top: 15%;
+    }
+    #okoye{
+        background: url('/images/Enigme/Pantherenigme1.png') bottom left/70vh no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
+        height: 90vh;
+    }
+}
+@media screen and (max-width: 900px) {
+    #okoye{
+        background: url('/images/Enigme/Pantherenigme1.png') bottom left/80vh no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
+        height: 90vh;
+    }
+    .defi{
+        padding-top: 35%;
+        font-size: 1.4em;
+    }
+    #enigme{
+        display: block;
+    }
+    .guess, input{
+        width: 100%;
+    }
+    .did-you-know{
+        width: 100%;
+    }
+    .fact{
+        background: url('/images/Enigme/Pantherenigme2.png') center/90% no-repeat;
+        padding: 10%;
+        width: 85%;
+        margin: 5% 0;
+    }
+    .guess1{
+        word-spacing: 5px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #okoye{
+        background: url('/images/Enigme/Pantherenigme1.png') left/70vh no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
+        height: 100vh;
+    }
+    .defi{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 700px) {
+    #okoye{
+        background: url('/images/Enigme/Pantherenigme1.png') center/80vh no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
+        height: 100vh;
+    }
+    .defi{
+        width: 100%;
+        padding-top: 75%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .charade{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 600px) {
+    #okoye{
+        font-size: 1.5em;
+        padding-top: 10%;
+    }
 }
