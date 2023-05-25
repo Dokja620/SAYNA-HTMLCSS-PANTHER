@@ -9,7 +9,7 @@
 @import "/styles/external-styles/fonts.css";
 /*...finaly*/
 @import "/styles/external-styles/footer.css";
-@import "/styles/external-styles/fadein.css";
+/* @import "/styles/external-styles/fadein.css"; */
 /*span reset fonts*/
 span{
     font-family: 'texte';
@@ -46,7 +46,6 @@ span{
 
 /*first section... Black panther introduction*/
 .biographie{
-    width: 30%;
     PADDING: 15% 0 0 5%;
     margin-left: 5%;
 }
@@ -76,42 +75,9 @@ span{
     }
 }
 @media screen and (max-width:900px) {
-    .bg{
-        display: block;
-        height: 100%;
-        width: 80%;
-        margin-left: 15%;
-        font-size: .8em;
-        background: transparent;
-    }
-    .buste{
-        height: 241PX;
-        padding: 10px;
-    }
-    .anta{
-        padding: 0;
-    }
-    .text{
-        padding: 15px;
-        background: linear-gradient(to right, #021740, transparent);
-    }
-    .princess{
-        padding: 0;
-        background: linear-gradient(to right, #021740, transparent);
-    }
+
 }
-@media screen and (max-width:700px) {
-    #hommage{
-        background-position: center;
-        background-size: 75%;
-    }
-    .intro{
-        padding-top:110%;
-    }
-    .intro div h1, h2{
-        line-height: 50px;
-    }
-}
+
 .buste{
     width: AUTO;
 }
@@ -179,21 +145,7 @@ span{
         padding: 7px 10px;
         border-radius: 5px;
     }
-        /*responsive of this second section*/
-        @media screen and (max-width: 900px) {
-            .partI{
-                display: block;
-            }
-            .portrait{
-                top: -20%;
-            }
-            .panther img{
-                width: 100%;
-            }
-            .bg{
-                margin-top: 55%;
-            }
-        }
+
 /*formulaire*/
     /*fromulaire bg*/
     #formulaire{
@@ -294,138 +246,113 @@ input:focus, textarea:focus{
 } */
 
 /*now let's make those fonts responsive*/
-@media screen and (max-width: 900px) {
-    body{
-        font-size: 10px;
+
+/*Responsive*/
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) and (max-width:768px) {
+    /*bg panther*/
+    #hommage{
+        background-position: 50% 25%;
+        background-size: 95%;
     }
-    #hommage2{
-        margin: 5% 5% 5% 13%;
+    /*first text... THE TITLES*/
+    .biographie{
+        padding-top: 80%;
+        margin: 0 15%;
+        font-size: 1.3em;
     }
-    form{
-        margin: 10% auto;
-        padding: 1% 0;
+    /*BUSTE SECTION... KILLMONGER, OKOYE, JURI*/
+    .bg{
+        display: block;
+        height: 100%;
+        background-color: transparent;
+        margin-top: 50%;
+        font-size: 1.2em;
+    }
+    .buste{
+        display: block;
+        margin: 0 10%;
+    }
+    .buste img{
+        width: 40%;
+    }
+    .text{
+        background: linear-gradient(to right, #021740, transparent);
+        padding: 10px;
         width: 60%;
     }
-    input, textarea{
-        margin: 1% 0;
-        width: 80%;
-        height: 40px;
-        border-radius: 20px;
-        padding: 10px 10px;
+    .anta{
+        padding: 0;
     }
-    textarea{
-        height: 200px;
+    /*the second section... T'Challa biographie*/
+    .partI{
+        display: block;
+        margin: 0 5%;
     }
-    .img1{
-        text-align: center;
-        margin-bottom: 20%;
+    .autobio{
+        font-size: 1.3em;
     }
-    .section1{
-        justify-content: center;
-        width: 100vw;
+    /*T'challa adventure or whatever this is*/
+    .tchalla{
+        width: 70%;
+        margin: 10%;
+        font-size: 1.2em;
     }
-    .section2 ul{
-        justify-content: center;
-        padding-bottom: 5%;
+    .description{
+        margin-top: 70%;
+        width: 110%;
     }
-    .img1 img{
-        width: 60%;
+    .portrait img{
+        width: 70%;
     }
-    .media img{
-        width: 20%;
+    .description2{
+        padding-top: 65%;
     }
-    .btn{
-        width: 150px;
-        padding: 10px 0;
-    }
-    .section1{
+    .panther img{
         width: 100%;
     }
-    .biographie{
-        width: 35%;
-        PADDING: 15% 0 0 7%;
-        margin-left: 5%;
-    }
-    .logo{
-        padding-left: 5%;
-    }
-    #hommage{
-        background-position: bottom right;
-        height: 80vh;
-    }
-}
-@media screen and (max-width: 700px) {
-    body{
-        font-size: 8px;
-    }
-    #hommage2{
-        margin: 5% 5% 5% 16%;
-    }
-    .btn{
-        width: 130px;
-        padding: 8px 0;
-    }
-    .navbar .menu-burger{
-        width: 30px;
-    }
-    .biographie{
-        width: 45%;
-        PADDING: 15% 0 0 12%;
-        margin-left: 5%;
-    }
-    .navbar{
-        MARGIN-bottom: 10%;
-    }
-    #hommage{
-        height: 60vh;
-    }
-}
-@media screen and (max-width: 500px) {
-    body{
-        font-size: 6px;
-    }
-    #hommage2{
-        margin: 5% 5% 5% 21%;
+    /*FORMULAIRE*/
+    #formulaire{
+        height: 100vh;
     }
     form{
-        margin: 10% 0 0 20% ;
-        padding: 1% 0;
-        width: 70%;
-        border-radius: 30px;
+        text-align: center;
+        background: linear-gradient(to bottom, white, transparent);
+        width: 60%;
+        border-radius: 25px;
+        color: var(--general);
     }
     input, textarea{
-        margin: 1% 0;
         width: 80%;
-        height: 30px;
-        border-radius: 20px;
-        padding: 10px 10px;
+        height: 26px;
+        border: 1px solid var(--general);
+        border-radius: 10px;
     }
     textarea{
-        height: 200px;
+        height: 150px;
     }
-    .btn{
-        width: 150px;
-        padding: 10px 0;
-    }
-    .btn{
-        width: 35%;
-        padding: 6px 0;
-    }
-    .navbar .menu-burger{
-        width: 25px;
-    }
-    #hommage{
-        height: 40vh;
-    }
+        /*btn inside the form*/
+        button{
+            width: 100px;
+            padding: 5px 0;
+            border-radius: 30px;
+        }
 }
-@media screen and (max-width: 300px) {
-    body{
-        font-size: 5px;
-    }
-    #hommage2{
-        margin: 5% 5% 5% 26%;
-    }
-    .navbar .menu-burger{
-        width: 20px;
-    }
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
 }
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+
+}    

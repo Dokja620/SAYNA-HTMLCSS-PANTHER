@@ -4,6 +4,9 @@ footer{
     background-size: cover;
     padding-top: 5%;
 }
+.about p a{
+    color: white;
+}
 .foot{
     display: flex;
     justify-content: center;
