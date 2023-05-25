@@ -49,6 +49,10 @@ span{
     PADDING: 15% 0 0 5%;
     margin-left: 5%;
 }
+.biographie p{
+    padding-top: 15px;
+    width: 30%;
+}
 #hommage{
     background: url('/images/Accueil/Pantherhome1..png') no-repeat;
     background-position: right;
@@ -57,6 +61,9 @@ span{
 }
 
 /*characters section... killmonger, okoye and juri*/
+.hline{
+    display: none;
+}
 .buste{
     display: flex;
 }
@@ -248,9 +255,11 @@ input:focus, textarea:focus{
 /*now let's make those fonts responsive*/
 
 /*Responsive*/
-
 /* SMARTPHONES PORTRAIT */
-@media only screen and (min-width: 300px) and (max-width:768px) {
+@media only screen and (min-width: 300px) and (max-width:900px) {
+    .soc{
+        margin-left: 10px;
+    }
     /*bg panther*/
     #hommage{
         background-position: 50% 25%;
@@ -261,6 +270,9 @@ input:focus, textarea:focus{
         padding-top: 80%;
         margin: 0 15%;
         font-size: 1.3em;
+    }
+    .biographie p{
+        width: 100%;
     }
     /*BUSTE SECTION... KILLMONGER, OKOYE, JURI*/
     .bg{
@@ -280,11 +292,19 @@ input:focus, textarea:focus{
     .text{
         background: linear-gradient(to right, #021740, transparent);
         padding: 10px;
-        width: 60%;
+        width: 90%;
     }
     .anta{
         padding: 0;
     }
+        /*separation line*/
+        .hline{
+            display: block;
+            height: 2px;
+            width: 90%;
+            background: linear-gradient(to right, #021740, transparent);
+            margin: 5px 0;
+        }
     /*the second section... T'Challa biographie*/
     .partI{
         display: block;
@@ -339,20 +359,3 @@ input:focus, textarea:focus{
             border-radius: 30px;
         }
 }
-
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) {
-}
-
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) {
-
-
-}
-
-
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 1024px) {
-
-
-}    
