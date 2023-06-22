@@ -90,6 +90,7 @@ body{
     top: 0;
     left: 2vw;
     display: flex;
+    animation: top-bottom .7s ease-in 1s, display 1.3s ease;
     z-index: 3;
     .first-line{
         width: 3px;
@@ -112,6 +113,29 @@ body{
     transition: all .25s ease-in-out;
     &:hover{
         filter: brightness(0) invert(1);
+    }
+}
+@keyframes display {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes top-bottom {
+    from{
+        transform: translateY(-100%);
+        filter: blur(2px);
+    }
+}
+.navbar, main{
+    animation: left-right .7s ease-in;
+}
+@keyframes left-right {
+    from{
+        transform: translateX(-20%);
+        filter: blur(2px);
     }
 }
 
