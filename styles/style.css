@@ -1,361 +1,108 @@
-/*I chosed to import those 'cause all the pages have the same styles.... so...*/
-/*to avoid copy and paste the same styles*/
-
-/*first things first*/
-@import "/styles/external-styles/default.css";
-/*then...*/
-@import "/styles/external-styles/navbar.css";
-/*...after that...*/
-@import "/styles/external-styles/fonts.css";
-/*...finaly*/
-@import "/styles/external-styles/footer.css";
-/* @import "/styles/external-styles/fadein.css"; */
-/*span reset fonts*/
-span{
-    font-family: 'texte';
-}
-/*the vertical mediasocial stuff*/
-.soc{
-    position: fixed;
-    top: 0;
-    display: flex;
-    gap: 10px;
-    margin-left: 30px;
-}
-.first-line{
-    width: 3px;
-    height: 415px;
-    background-color: var(--pinky);
-}
-.lines{
-    width: 3px;
-    height: 250px;
-    margin-left: 10px;
-    background-color: var(--pinky);
-}
-.social2{
-    display: block;
-}
-.social2 img{
-    padding: 10px 0;
-    transition: .3s all ease-in-out;
-}
-.social2 img:hover{
-    filter: brightness(0) invert(1);
+@charset "UTF-8";
+/*variable for the colors*/
+:root {
+  --general: #021740;
+  --pinky: #9E91B7;
+  --button: #F2CEF2;
 }
 
-/*first section... Black panther introduction*/
-.biographie{
-    PADDING: 15% 0 0 5%;
-    margin-left: 5%;
+/*the fonts*/
+@font-face {
+  font-family: "Titre H1";
+  src: url(/fonts/panthera.otf);
 }
-.biographie p{
-    padding-top: 15px;
-    width: 30%;
+@font-face {
+  font-family: "Titre H2";
+  src: url(/fonts/BEYNO.ttf);
 }
-#hommage{
-    background: url('/images/Accueil/Pantherhome1..png') no-repeat;
-    background-position: right;
-    background-size: 55%;
-    height: 100vh;
+@font-face {
+  font-family: "Enigme";
+  src: url(/fonts/WakandaForever-Regular.ttf);
 }
-
-/*characters section... killmonger, okoye and juri*/
-.hline{
-    display: none;
+@font-face {
+  font-family: "texte";
+  src: url(/fonts/Cantarell-Regular.ttf);
 }
-.buste{
-    display: flex;
-}
-.bg{
-    display: flex;
-    background-color: var(--general);
-    height: 40vh;
-    width: 100%;
-    margin-left: 5%;
-    font-size: .8em;
-}
-/*bg font size*/
-@media screen and (max-width:1000px) {
-    .bg{
-        font-size: .7em;
-    }
-}
-@media screen and (max-width:900px) {
-
+/*...then let's reset the default styles*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.buste{
-    width: AUTO;
+/*former bgs remove this later*/
+body {
+  background: url("/images/Allpages/arrière_plan.png") no-repeat;
+  background-size: cover;
+  font-size: 12px;
+  color: white;
+  overflow-x: hidden;
 }
-.buste img{
-    height: 100%;
-}
-.anta{
-    padding-left: 5%;
-}
-.text{
-    margin: 4%;
-    text-align: justify;
-}
-/*biograophie section*/
-#hommage2{
-    margin: 5% 5% 5% 10%;
-}
-.partI{
-    display: flex;
-}
-.autobio{
-    text-align: justify;
-}
-.description{
-    margin: 40% auto 0 auto;
-    color: var(--general);
-    background: white;
-    position: relative;
-    width: 75%;
-    border-radius: 10px;
-    padding: AUTO;
-}
-.second, .third{
-    padding-top: 2%;
-}
-.portrait{
-    position: absolute;
-    top: -30%;
-    text-align: center;
-}
-.portrait img{
-    width: 80%;
-}
-.description2{
-    padding: 70% 5% 15% 5%;
-}
-.panther{
-    margin: 5% 0;
-}
-    /*The button like stuff*/
-    h5{
-        text-align: center;
-        font-weight: bold; 
-        font-size: 2.5em; 
-        font-family: 'texte';
-    }
-    .btn2{
-        display: flex;
-        justify-content: center;
-    }
-    h6{
-        background-color: #3D2DA6;
-        margin: 6% 2%;
-        color: white;
-        padding: 7px 10px;
-        border-radius: 5px;
-    }
 
-/*formulaire*/
-    /*fromulaire bg*/
-    #formulaire{
-        background: url(/images/Accueil/Pantherhome7.png) no-repeat;
-        background-size: cover;
-        height: 100vh;
-    }
-form{
-    margin: 10% auto;
-    padding: 1% 0;
-    text-align: center;
-    background: linear-gradient(to bottom, white, transparent);
-    width: 60%;
-    border-radius: 60px;
-    color: var(--general);
+.soc {
+  position: fixed;
+  top: 0;
+  left: 2vw;
+  display: flex;
 }
-input, textarea{
-    background: none;
-    margin: 1% 0;
-    width: 55%;
-    height: 56px;
-    border: 2px solid var(--general);
-    border-radius: 20px;
-    padding: 10px 10px;
+.soc .first-line {
+  width: 3px;
+  height: 45vh;
+  background-color: var(--pinky);
 }
-textarea{
-    height: 200px;
+.soc .lines {
+  margin-left: 10px;
 }
-input:focus, textarea:focus{
-    outline: none;
+.soc .second-line {
+  width: 3px;
+  height: calc(40vh - 100px);
+  background-color: var(--pinky);
+  margin-left: 10px;
 }
-::placeholder{
-    color: var(--general);
-    font-size: .8em;
-}
-    /*real button*/
-    .btn{
-        text-align: center;
-    }
-    button{
-        width: 150px;
-        padding: 10px 0;
-        border-radius: 38px;
-        margin: 3% auto;
-        transition: .25s all ease-in-out;
-        background-color: var(--button);
-        border: none;
-        justify-content: center;
-    }
-    button:hover{
-        filter: drop-shadow(0 0 10px #021740);
-        color: var(--general);
-    }
-/*Popup*/
-/* .popup .overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-}
-.popup .content{
-    position: absolute;
-    color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    background: #FFF;
-    width: 150PX;
-    height: 150PX;
-    z-index: 2;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.popup .close-btn{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #3D2DA6;
-    color: white;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    font-weight: 600;
-    line-height: 15px;
-    text-align: center;
-    font-size: 27px;
-}
-.popup.active .overlay{
-    display: block;
-}
-.popup.active content{
-    transition: all 100ms ease-in-out;
-    transform: translate(-50%, -50%) scale(2);
-} */
 
-/*now let's make those fonts responsive*/
-
-/*Responsive*/
-/* SMARTPHONES PORTRAIT */
-@media only screen and (min-width: 300px) and (max-width:900px) {
-    .soc{
-        margin-left: 10px;
-    }
-    /*bg panther*/
-    #hommage{
-        background-position: 50% 25%;
-        background-size: 95%;
-    }
-    /*first text... THE TITLES*/
-    .biographie{
-        padding-top: 80%;
-        margin: 0 15%;
-        font-size: 1.3em;
-    }
-    .biographie p{
-        width: 100%;
-    }
-    /*BUSTE SECTION... KILLMONGER, OKOYE, JURI*/
-    .bg{
-        display: block;
-        height: 100%;
-        background-color: transparent;
-        margin-top: 50%;
-        font-size: 1.2em;
-    }
-    .buste{
-        display: block;
-        margin: 0 10%;
-    }
-    .buste img{
-        width: 40%;
-    }
-    .text{
-        background: linear-gradient(to right, #021740, transparent);
-        padding: 10px;
-        width: 90%;
-    }
-    .anta{
-        padding: 0;
-    }
-        /*separation line*/
-        .hline{
-            display: block;
-            height: 2px;
-            width: 90%;
-            background: linear-gradient(to right, #021740, transparent);
-            margin: 5px 0;
-        }
-    /*the second section... T'Challa biographie*/
-    .partI{
-        display: block;
-        margin: 0 5%;
-    }
-    .autobio{
-        font-size: 1.3em;
-    }
-    /*T'challa adventure or whatever this is*/
-    .tchalla{
-        width: 70%;
-        margin: 10%;
-        font-size: 1.2em;
-    }
-    .description{
-        margin-top: 70%;
-        width: 110%;
-    }
-    .portrait img{
-        width: 70%;
-    }
-    .description2{
-        padding-top: 65%;
-    }
-    .panther img{
-        width: 100%;
-    }
-    /*FORMULAIRE*/
-    #formulaire{
-        height: 100vh;
-    }
-    form{
-        text-align: center;
-        background: linear-gradient(to bottom, white, transparent);
-        width: 60%;
-        border-radius: 25px;
-        color: var(--general);
-    }
-    input, textarea{
-        width: 80%;
-        height: 26px;
-        border: 1px solid var(--general);
-        border-radius: 10px;
-    }
-    textarea{
-        height: 150px;
-    }
-        /*btn inside the form*/
-        button{
-            width: 100px;
-            padding: 5px 0;
-            border-radius: 30px;
-        }
+.social2 div a img {
+  margin: 5px 0;
 }
+
+/*Première partie*/
+#hommage {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background: url(../images/Accueil/Pantherhome1..png) 70% 100px/100vh no-repeat;
+}
+
+.biographie {
+  margin-left: 10vw;
+}
+.biographie p {
+  width: 30%;
+}
+
+/*Deuxième partie*/
+#buste {
+  display: none;
+}
+
+/*Troisième partie*/
+#naissance {
+  margin: 25% 0;
+}
+
+.partI {
+  display: flex;
+  margin: 0 7vw;
+}
+.partI .autobio {
+  width: 70%;
+}
+.partI .tchalla {
+  width: 30%;
+}
+
+/*# sourceMappingURL=style.css.map */

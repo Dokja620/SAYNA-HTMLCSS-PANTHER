@@ -1,0 +1,106 @@
+/*variable for the colors*/
+:root{
+    --general: #021740;
+    --pinky: #9E91B7;
+    --button: #F2CEF2;
+}
+
+/*the fonts*/
+@font-face {
+    font-family: 'Titre H1';
+    src: url(/fonts/panthera.otf);
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url(/fonts/BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url(/fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+    font-family: 'texte';
+    src: url(/fonts/Cantarell-Regular.ttf);
+}
+
+/*...then let's reset the default styles*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*former bgs remove this later*/
+body{
+    background: url('/images/Allpages/arrière_plan.png') no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    color: white;
+    overflow-x: hidden;
+}
+//Fixed scroll bar
+.soc{
+    position: fixed;
+    top: 0;
+    left: 2vw;
+    display: flex;
+    .first-line{
+        width: 3px;
+        height: 45vh;
+        background-color: var(--pinky);
+    }
+    .lines{
+        margin-left: 10px;
+    }
+    .second-line{
+        width: 3px;
+        height: calc(40vh - 100px);
+        background-color: var(--pinky);
+        margin-left: 10px;
+    }
+}
+.social2 div a img{
+    margin: 5px 0;
+}
+
+/*Première partie*/
+#hommage{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background: url(../images/Accueil/Pantherhome1..png) 70% 100px/100vh no-repeat;
+}
+
+//Movie Intro
+.biographie{
+    margin-left: 10vw;
+    p{
+        width: 30%;
+    }
+}
+
+/*Deuxième partie*/
+#buste{
+    display: none;
+}
+
+/*Troisième partie*/
+#naissance{
+    margin: 25% 0;
+}
+.partI{
+    display: flex;
+    margin: 0 7vw;
+    //TWO PART LEFT AND RIGHT
+    .autobio{
+        width: 70%;
+    }
+    .tchalla{
+        width: 30%;
+    }
+}
