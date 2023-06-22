@@ -9,10 +9,11 @@
     <title>Homepage</title>
     <link rel="shortcut icon" href="./images/logo_souris_BP2_blanc.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./scripts/page.js"></script>
 </head>
 <body>
 <header>
-    <!-- <nav class="navbar">
+    <nav class="navbar">
         <div class="logo">
             <div class="log-x-m">
                 <img src="./images/Allpages/icon_SAYNA.png" alt="">
@@ -20,15 +21,15 @@
                 <img src="./images/Allpages/icon_MARVEL.png" alt="">
             </div>
         </div>
-        <div class="nav mobile-menu">
+        <div class="nav-links mobile-menu">
             <ul>
-                <li><a href="./index.html" class="hover-underline-animation active">ACCEUIL</a></li>
-                <li><a href="./pages/wakanda.html" class="hover-underline-animation">WAKANDA</a></li>
-                <li><a href="./pages/enigme.html" class="hover-underline-animation">ENIGME</a></li>
+                <li><a href="./index.html" class="underline active">ACCEUIL</a></li>
+                <li><a href="./pages/wakanda.html" class="underline inactive">WAKANDA</a></li>
+                <li><a href="./pages/enigme.html" class="underline inactive">ENIGME</a></li>
             </ul>
         </div>
-        <img src="./images/Allpages/menu.png" alt="menu hamburger" class="menu-burger">
-    </nav> -->
+        <img src="./images/Allpages/menu.png" alt="menu hamburger" class="menu-burger" height="33px">
+    </nav>
 </header>
 <div class="soc">
     <div class="first-line"></div>
@@ -76,57 +77,37 @@
         </div>
     </section>
     <section id="buste">
-        <div class="bg">
-            <div class="hline"></div>
-            <div class="buste">
-                <div class="anta">
-                    <img src="./images/Accueil/Pantherhome2.png" alt="">
-                </div>
-                <div class="text monger">
-                    <h2>
-                        KILLMONGER
-                    </h2>
-                    <p>
-                        La sauvagerie de N'Jadaka alors qu'il servait dans une
-                        unité d'opérations noires de l'armée américaine lui a
-                        valu le surnom de Killmonger. D’origine Wakandaise,
-                        et se sentant abandoné par sa nation, il cherche à
-                        détroner T’Challa dans une quête vers le pourvoir
-                    </p>
-                    <br>
-                    <p class="more">
-                        <p style="color: white; text-decoration: underline;">Voir plus ></p>
-                    </p>
-                </div>
-            </div>
-            <div class="buste">
-                <div class="knight">
-                    <img src="./images/Accueil/Pantherhome3.png" alt="">
-                </div>
-                <div class="text">
-                    <h2>
-                        OKOYE
-                    </h2>
-                    <p>
-                        Okoye est le général des Dora Milaje (groupe d’élite
-                        de femmes guerrières) et le chef des forces armées et
-                        des renseignements wakandais. Témoin du
-                        couronnement de T'Challa, elle se joint à lui dans de
-                        nombreuses aventures.
-                    </p>
-                    <br>
-                    <p class="more">
-                        <p style="color: white; text-decoration: underline;">Voir plus ></p>
-                    </p>
-                </div>
-            </div>
-            <div class="buste princess">
-                <div class="princess">
-                    <img src="./images/Accueil/Pantherhome4.png" alt="">
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./images/Accueil/Pantherhome2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2>
+                                KILLMONGER
+                            </h2>
+                            <p>
+                                La sauvagerie de N'Jadaka alors qu'il servait dans une
+                                unité d'opérations noires de l'armée américaine lui a
+                                valu le surnom de Killmonger. D’origine Wakandaise,
+                                et se sentant abandoné par sa nation, il cherche à
+                                détroner T’Challa dans une quête vers le pourvoir
+                            </p>
+                            <br>
+                            <p class="more">
+                                <p style="color: white; text-decoration: underline;">Voir plus ></p>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hline"></div>
     </section>
     <section id="naissance">
         <div class="partI">
@@ -233,8 +214,8 @@
             </div>
         </div>
     </section>
-    <section id="formulaire" class="formulaire">
-        <form>
+    <form>
+        <div id="formulaire" class="form">
             <div class="head">
                 <p>Besoin de l’intervention du Wakanda ?</p>
                 <h3>Contactez nous !</h3>
@@ -247,11 +228,12 @@
                     <button>ENVOYER</button>
                 </div>
             </div>
-        </form>
-    </section>
+        </div>
+    </form>
+
 </main>
 <footer>
-    <!-- <div class="foot">
+    <div class="foot">
         <div class="bgimg">
             <div class="img1">
                 <img src="./images/Allpages/footer1.png" alt="">
@@ -261,10 +243,10 @@
             </div>
         </div>
         <div class="footer">
-            <div class="section1">
+            <div class="section1 bottom">
                 <div class="pages">
                     <h4>PAGES</h4>
-                    <div class= "about" style="margin-top: 30%;">
+                    <div class= "about" style="margin-top: 5%;">
                         <p><a href="./index.html">à propos</a></p>
                         <p><a href="./wakanda.html">Wakanda</a></p>
                     </div>
@@ -279,7 +261,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section2">
+            <div class="section2 bottom">
                 <div class="copyright">
                     <p>2022 Tous droits réservés</p>
                     <div class="point"></div>
@@ -289,7 +271,7 @@
             </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </footer>
 </body>
 </html>
