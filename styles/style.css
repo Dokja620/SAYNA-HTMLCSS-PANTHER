@@ -532,6 +532,9 @@ footer {
   justify-content: space-between;
   margin-bottom: 5%;
 }
+.section1 * {
+  color: #fff;
+}
 
 .media {
   text-align: center;
