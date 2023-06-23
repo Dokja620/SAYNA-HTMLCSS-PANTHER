@@ -273,7 +273,7 @@ body{
 
 /*Deuxième partie*/
 #buste{
-    height: 100vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,10 +298,25 @@ body{
     .card-content{
         padding: 10px 15px;
         text-align: justify;
-        width: 320px;
+        width: 290px;
     }
 }
-
+@media screen and (max-width: 500px) {
+    #buste{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 20% 0;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        .card-content{
+            width: 85%;
+            padding-top: 70px;
+        }
+    }
+}
 /*Troisième partie*/
 #naissance{
     margin: 25% 0;
@@ -382,8 +397,76 @@ form{
     padding: 20px;
     color: #021740;
     background: linear-gradient(to bottom, #fff, transparent);
+    width: 40vw;
+    min-width: 270px;
+    input, textarea{
+        background: transparent;
+        margin: 5px 0;
+        width: 55%;
+        height: 40px;
+        border-radius: 20px;
+        padding: 10px 10px;
+        font-family: 'Texte';
+        border: 2px solid var(--general);
+        color: var(--general);
+        &:focus{
+            outline: none;
+        }
+    }
+    textarea{
+        height: 60%;
+    }
+    button{
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 38px;
+        margin: 3% auto;
+        background-color: var(--button);
+        border: none;
+        justify-content: center;
+        cursor: pointer;
+        transition: .25s all ease-out;
+        &:hover{
+            filter: drop-shadow(0 0 10px #021740);
+            color: var(--general);
+        }
+    }
 }
-
+::placeholder{
+    color: var(--general);
+    font-size: 20px;
+}
+//confirmation form
+#name-error, #email-error{
+    margin: 5px auto;
+    width: 50%;
+    font-size: 1em;
+    color: #C62828;
+    background: rgba(256, 0, 0, 0.1);
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--general);
+    display: none;
+}
+@media screen and (max-width: 900px) {
+    .form{
+        width: 70vw;
+        input, textarea{
+            width: 90%;
+        }
+        textarea{
+            height: 50%;
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    .form{
+        h3{
+            font-size: 2em;
+            font-weight: 600;
+        }
+    }
+}
 /*Footer*/
 footer{
     height: max-content;
@@ -471,7 +554,9 @@ footer{
     #hommage{
         background: url(../images/Accueil/Pantherhome1..png) top center/90vw no-repeat;
     }
-    
+    #buste{
+        height: 70vh;
+    }
     //Movie Intro
     .biographie{
         text-align: center;
@@ -484,9 +569,10 @@ footer{
         }
     }   
 }
-@media screen and (max-width: 820px) { 
+@media screen and (max-width: 820px) {
     #naissance{
         margin: 0;
+        padding-top: 20%;
     }
     .partI{
         display: block;

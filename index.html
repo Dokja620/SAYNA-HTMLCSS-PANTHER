@@ -23,7 +23,7 @@
         </div>
         <div class="nav-links mobile-menu">
             <ul>
-                <li><a href="./index.html" class="underline active">ACCEUIL</a></li>
+                <li><a href="#" class="underline active">ACCEUIL</a></li>
                 <li><a href="./pages/wakanda.html" class="underline inactive">WAKANDA</a></li>
                 <li><a href="./pages/enigme.html" class="underline inactive">ENIGME</a></li>
             </ul>
@@ -214,18 +214,20 @@
             </div>
         </div>
     </section>
-    <form>
+    <form method="post" onsubmit="return validated()">
         <div id="formulaire" class="form">
             <div class="head">
                 <p>Besoin de l’intervention du Wakanda ?</p>
                 <h3>Contactez nous !</h3>
             </div>
             <div class="inputs">
-                <input type="text" placeholder="Nom"> <br>
-                <input type="email" placeholder="Email"> <br>
+                <input type="text" placeholder="Nom" name="name"> <br>
+                <div id="name-error">Veuillez remplir le champ avant soumettre ceci</div>
+                <input type="email" placeholder="Email" name="mail"> <br>
+                <div id="email-error">Veuillez remplir le champ avant soumettre ceci</div>
                 <textarea name="Message" id="" cols="30" rows="10" placeholder="Messages"></textarea>
                 <div class="btn">
-                    <button>ENVOYER</button>
+                    <button type="button">ENVOYER</button>
                 </div>
             </div>
         </div>
