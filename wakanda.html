@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Wakanda</title>
-    <link rel="stylesheet" href="/styles/wakanda.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EVALUATION - BLACK PANTHER">
+    <meta name="author" content="Axel Diary RAKOTOARIVAO">
+    <title>Wakanda</title>
+    <link rel="shortcut icon" href="./images/logo_souris_BP2_blanc.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/wakanda.css">
+    <script defer src="./scripts/page.js"></script>
 </head>
 <body>
- <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <div class="log-x-m">
-                        <img src="/images/Allpages/icon_SAYNA.png" alt="">
-                        <img src="/images/Allpages/icon_x.png" alt="" style="padding-bottom: 10px;">
-                        <img src="/images/Allpages/icon_MARVEL.png" alt="">
-                    </div>
-                </div>
-                <div class="nav mobile-menu">
-                    <ul>
-                        <li><a href="/index.html" class="hover-underline-animation">ACCEUIL</a></li>
-                        <li><a href="/pages/wakanda.html" class="hover-underline-animation active">WAKANDA</a></li>
-                        <li><a href="/pages/enigme.html" class="hover-underline-animation">ENIGME</a></li>
-                    </ul>
-                </div>
-                <img src="/images/Allpages/menu.png" alt="menu hamburger" class="menu-burger">
-            </nav>
+<header>
+    <nav class="navbar" id="home">
+        <div class="logo">
+            <div class="log-x-m">
+                <img src="./images/Allpages/icon_SAYNA.png" alt="">
+                <img src="./images/Allpages/icon_x.png" alt="" style="padding-bottom: 10px;">
+                <img src="./images/Allpages/icon_MARVEL.png" alt="">
+            </div>
+        </div>
+        <div class="nav-links mobile-menu">
+            <ul>
+                <li><a href="./index.html" class="underline inactive">ACCEUIL</a></li>
+                <li><a href="#" class="underline active">WAKANDA</a></li>
+                <li><a href="./enigme.html" class="underline inactive">ENIGME</a></li>
+            </ul>
+        </div>
+        <img src="./images/Allpages/menu.png" alt="menu hamburger" class="menu-burger" height="33px">
+    </nav>
 </header>
 <main>
     <section id="city">
@@ -173,32 +179,32 @@
     <div class="foot">
         <div class="bgimg">
             <div class="img1">
-                <img src="/images/Allpages/footer1.png" alt="">
+                <img src="./images/Allpages/footer1.png" alt="">
                 <div class="img2">
-                    <img src="/images/Allpages/footer2.png" alt="">
+                    <a href="#home"><img src="./images/Allpages/footer2.png" alt=""></a>
                 </div>
             </div>
         </div>
         <div class="footer">
-            <div class="section1">
+            <div class="section1 bottom">
                 <div class="pages">
                     <h4>PAGES</h4>
-                    <div class= "about" style="margin-top: 30%;">
-                        <p><a href="/index.html">à propos</a></p>
-                        <p><a href="/pages/wakanda.html">Wakanda</a></p>
+                    <div class= "about" style="margin-top: 5%;">
+                        <p><a href="./index.html">à propos</a></p>
+                        <p><a href="./wakanda.html">Wakanda</a></p>
                     </div>
                 </div>
                 <div class="social">
                     <h4>RETROUVER NOUS</h4>
                     <div class="media">
-                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="/images/Allpages/footer3.png" alt=""></a>
-                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="/images/Allpages/footer4.png" alt=""></a>
-                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="/images/Allpages/footer5.png" alt=""></a>
-                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="/images/Allpages/footer6.png" alt=""></a>
+                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./images/Allpages/footer3.png" alt=""></a>
+                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./images/Allpages/footer4.png" alt=""></a>
+                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./images/Allpages/footer5.png" alt=""></a>
+                        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="./images/Allpages/footer6.png" alt=""></a>
                     </div>
                 </div>
             </div>
-            <div class="section2">
+            <div class="section2 bottom">
                 <div class="copyright">
                     <p>2022 Tous droits réservés</p>
                     <div class="point"></div>
@@ -211,12 +217,4 @@
     </div>
 </footer>
 </body>
-<script>
-    const menuHamburger = document.querySelector(".menu-burger")
-    const navLinks = document.querySelector(".nav")
-
-    menuHamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
-    })
-</script>
 </html>

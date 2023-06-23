@@ -1,129 +1,168 @@
-/*Same as the Homepage*/
-/*to avoid copy and paste the same styles*/
-/*first things first*/
-@import "/styles/external-styles/default.css";
-/*then...*/
-@import "/styles/external-styles/navbar.css";
-/*...after that...*/
-@import "/styles/external-styles/fonts.css";
-/*...finaly*/
-@import "/styles/external-styles/footer.css";
-@import "/styles/external-styles/fadein.css";
+@charset "UTF-8";
+/*import external libs*/
+@import url(../styles/external-styles/default.css);
+@import url(../styles/external-styles/navbar.css);
+@import url(../styles/external-styles/footer.css);
+/*the fonts*/
+@font-face {
+  font-family: "Titre H1";
+  src: url(../fonts/panthera.otf);
+}
+@font-face {
+  font-family: "Titre H2";
+  src: url(../fonts/BEYNO.ttf);
+}
+@font-face {
+  font-family: "Enigme";
+  src: url(../fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "texte";
+  src: url(../fonts/Cantarell-Regular.ttf);
+}
+h1 {
+  font-family: "Titre H2";
+  font-size: 4em;
+  color: var(--pinky);
+}
 
-/*first section*/
-#city{
-    background: url('/images/Wakanda/Pantherwakanda1.png') 80% 20% no-repeat;
-    background-size: cover;
-    min-height: 300PX;
+h2 {
+  font-family: "Titre H2";
+  font-size: 2.6em;
+  color: var(--pinky);
+}
+
+p {
+  font-family: "texte";
+  font-size: 1.3em;
+}
+
+q {
+  font-family: "texte";
+  font-size: 1em;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "texte";
+  font-size: 4em;
+}
+
+.btn {
+  font-family: "texte";
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "texte";
+  font-size: 1.8em;
+  letter-spacing: 4px;
+}
+
+span {
+  font-family: "Enigme";
+  font-size: 0.9em;
+  word-spacing: 10px;
+  padding-left: 10px;
+}
+
+/*The bgs*/
+body {
+  background: url("../images/Allpages/arrière_plan.png") no-repeat;
+  background-size: cover;
+  font-size: 12px;
+  color: white;
+  overflow-x: hidden;
+}
+
+footer {
+  height: max-content;
+  padding: 40px 0;
+  background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
+}
+
+/*First section*/
+#city {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/Wakanda/Pantherwakanda1.png) 70% 30%/cover no-repeat;
+}
+
+.ever {
+  margin: 10%;
+}
+.ever .ever-text {
+  width: 300px;
+  text-align: justify;
+  font-size: 0.9em;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 900px) {
+  .ever-title {
+    background: linear-gradient(to right, transparent, rgba(220, 22, 22, 0.3254901961), transparent);
+  }
+  .ever-text {
+    background: linear-gradient(to right, rgba(98, 7, 106, 0.4666666667), transparent);
+    padding-left: 5px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #city {
     height: 100vh;
-}
-.ever{
-    margin: 0 10%;
-    padding: 10% 0;
-}
-.ever-title{
-    margin-bottom: 30px;
-    line-height: 50px;
-}
-.ever-title h1{
-    font-family: 'Titre H2';
-    font-size: 4em;
-}
-.ever-title h2{
-    word-spacing: 40px;
-}
-.ever-text{
-    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+  .ever {
+    display: grid;
+    text-align: center;
+  }
+  .ever .ever-text {
+    width: 90%;
     text-align: justify;
-    background: linear-gradient(to right, transparent, rgba(128, 128, 128, 0.318), transparent);
-}
-.ever-text p{
-    font-size: 1.2em;
+    font-size: 1em;
+    margin: 25px auto 10px;
+    background: linear-gradient(to right, transparent, rgba(98, 7, 106, 0.4666666667), transparent);
+    padding-left: 0;
+  }
 }
 /*second section*/
-#origins{
-    display: flex;
-    margin: 5% 2%;
-    text-align: justify;
-    font-size: .9em;
-    background: url(/images/Wakanda/Pantherwakanda2.png) top center/90% no-repeat;
-}
-.leftpart{
-    margin: 0 2% 0 5%;
-    width: 50%;
-} 
-.rightpart{
-    margin: 0 5% 0 2%;
-    width: 50%;
-}
-.vidéo{
- margin: 5% 0;
-}
-/*right part of */
-.chars{
-    text-align: center;
-    margin: 25px 0;
-}
-.chars img{
-    width: 70%;
+#origins {
+  display: flex;
+  margin: 10% 30px;
+  text-align: justify;
+  background: url(../images/Wakanda/Pantherwakanda2.png) top center/100% no-repeat;
 }
 
-/*responsive*/
-@media only screen and (min-width: 300px) and (max-width:900px){
-    #city{
-        background-position: 70% 20%;
-        height: 100vh;
-    }
-    .ever{
-        margin: 0 12%;
-        padding: 10% 0;
-    }
-    .ever-title{
-        margin-top: 100px;
-        margin-bottom: 25px;
-        line-height: 40px;
-    }
-    .ever-text{
-        width: 45%;
-        text-align: justify;
-    }
-    /*second section*/
-    #origins{
-        display: block;
-    }
-    .leftpart{
-        font-size: 1.3em;
-        margin: 0;
-        padding: 0 5%;
-        width: 100%;
-    } 
-    .rightpart{
-        font-size: 1.3em;
-        margin: 0;
-        padding: 0 5%;
-        width: 100%;
-    }
-    /*right part of */
-
-    .chars img{
-        width: 90%;
-    }
-    #city{
-        background-position: 70% 20%;
-        height: 100vh;
-    }
-    .ever{
-        margin: 0 12%;
-        padding: 30% 0;
-        justify-content: center;
-    }
-    .ever-title{
-        text-align: center;
-    }
-    .ever-text{
-        width: 60%;
-        font-size: 1.3em;
-        margin: auto;
-        background: linear-gradient(to right, transparent, rgba(118, 0, 186, 0.194), transparent);
-    }
+.leftpart {
+  margin-right: 20px;
+  width: 50%;
 }
+
+.rightpart {
+  margin-left: 20px;
+  width: 50%;
+}
+.rightpart .chars img {
+  width: 100%;
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+  #origins {
+    display: block;
+    margin: 10%;
+  }
+  .leftpart {
+    margin-right: 0;
+    width: 100%;
+  }
+  .rightpart {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=wakanda.css.map */

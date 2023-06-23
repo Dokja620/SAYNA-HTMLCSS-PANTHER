@@ -1,0 +1,162 @@
+/*import external libs*/
+//Why?? literaly the same style so why bother to copy and cut
+@import url(../styles/external-styles/default.css);
+@import url(../styles/external-styles/navbar.css);
+@import url(../styles/external-styles/footer.css);
+
+/*the fonts*/
+@font-face {
+    font-family: 'Titre H1';
+    src: url(../fonts/panthera.otf);
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url(../fonts/BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url(../fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+    font-family: 'texte';
+    src: url(../fonts/Cantarell-Regular.ttf);
+}
+    //fonts
+    h1{
+        font-family: 'Titre H2';
+        font-size: 4em;
+        color: var(--pinky);
+    }
+    h2{
+        font-family: 'Titre H2';
+        font-size: 2.6em;
+        color: var(--pinky);
+    }
+    p{
+        font-family: 'texte';
+        font-size: 1.3em;
+    }
+    q{
+        font-family: 'texte';
+        font-size: 1em;
+        font-style: italic;
+    }       
+    h3{
+        font-family: 'texte';
+        font-size: 4em;   
+    }
+    .btn{
+        font-family: 'texte';
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    h4{
+        font-family: 'texte';
+        font-size: 1.8em;
+        letter-spacing: 4px;
+    }
+    span{
+        font-family: 'Enigme';
+        font-size: .9em;
+        word-spacing: 10px;
+        padding-left: 10px;
+    }
+
+/*The bgs*/
+//Body
+body {
+    background: url("../images/Allpages/arrière_plan.png") no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    color: white;
+    overflow-x: hidden;
+}
+//Footer
+footer {
+    height: max-content;
+    padding: 40px 0;
+    background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
+}
+
+/*First section*/
+#city{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/Wakanda/Pantherwakanda1.png) 70% 30%/cover no-repeat;
+}
+.ever{
+    margin: 10%;
+    .ever-text{
+        width: 300px;
+        text-align: justify;
+        font-size: .9em;
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .ever-title{
+        background: linear-gradient(to right, transparent, #dc161653, transparent);
+    }
+    .ever-text{
+        background: linear-gradient(to right,#62076a77, transparent);
+        padding-left: 5px;
+    }
+}
+@media screen and (max-width: 640px) {
+    #city{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .ever{
+        display: grid;
+        text-align: center;
+        .ever-text{
+            width: 90%;
+            text-align: justify;
+            font-size: 1em;
+            margin: 25px auto 10px;
+            background: linear-gradient(to right, transparent, #62076a77, transparent);
+            padding-left: 0;
+        }
+    }
+}
+
+/*second section*/
+#origins{
+    display: flex;
+    margin: 10% 30px;
+    text-align: justify;
+    background: url(../images/Wakanda/Pantherwakanda2.png) top center/100% no-repeat;
+}
+.leftpart{
+    margin-right: 20px;
+    width: 50%;
+}
+.rightpart{
+    margin-left: 20px;
+    width: 50%;
+    .chars{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+    #origins{
+        display: block;
+        margin: 10%;
+    }
+    .leftpart{
+        margin-right: 0;
+        width: 100%;
+    }
+    .rightpart{
+        margin-left: 0;
+        width: 100%;
+    }
+    
+}

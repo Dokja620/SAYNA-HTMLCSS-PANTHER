@@ -1,9 +1,8 @@
-/*variable for the colors*/
-:root{
-    --general: #021740;
-    --pinky: #9E91B7;
-    --button: #F2CEF2;
-}
+/*import external libs*/
+//Why?? literaly the same style so why bother to copy and cut
+@import url(../styles/external-styles/default.css);
+@import url(../styles/external-styles/navbar.css);
+@import url(../styles/external-styles/footer.css);
 
 /*the fonts*/
 @font-face {
@@ -57,204 +56,22 @@
         letter-spacing: 4px;
     }
 
-/*...then let's reset the default styles*/
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-weight: normal;
-    font-style: normal;
-    list-style: none;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-/*former bgs remove this later*/
-body{
-    background: url('../images/Allpages/arrière_plan.png') no-repeat;
+/*The bgs*/
+//Body
+body {
+    background: url("../images/Allpages/arrière_plan.png") no-repeat;
     background-size: cover;
     font-size: 12px;
     color: white;
     overflow-x: hidden;
 }
-@media screen and (max-width: 450px) {
-    .biographie{
-        h1{
-            font-size: 4em;
-        }
-    }
-}
-//Fixed scroll bar
-.soc{
-    position: fixed;
-    top: 0;
-    left: 2vw;
-    display: flex;
-    animation: top-bottom .7s ease-in 1s, display 1.3s ease;
-    z-index: 3;
-    .first-line{
-        width: 3px;
-        height: 45vh;
-        background-color: var(--pinky);
-    }
-    .lines{
-        margin-left: 10px;
-    }
-    .second-line{
-        width: 3px;
-        height: calc(40vh - 100px);
-        background-color: var(--pinky);
-        margin-left: 10px;
-    }
-}
-.social2 div a img{
-    margin: 5px 0;
-    cursor: pointer;
-    transition: all .25s ease-in-out;
-    &:hover{
-        filter: brightness(0) invert(1);
-    }
-}
-@keyframes display {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 0;
-    }
-}
-@keyframes top-bottom {
-    from{
-        transform: translateY(-100%);
-        filter: blur(2px);
-    }
-}
-.navbar, main{
-    animation: left-right .7s ease-in;
-}
-@keyframes left-right {
-    from{
-        transform: translateX(-20%);
-        filter: blur(2px);
-    }
+//Footer
+footer {
+    height: max-content;
+    padding: 40px 0;
+    background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
 }
 
-/*navbar*/
-.navbar{
-    margin: 30px 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font
-    a{
-        color: #fff;
-    }
-}
-.nav-links{
-    font-family: 'Titre H2';
-    font-size: 2em;
-    ul{
-        display: flex;
-        li{
-            margin: 0 25px;
-            .active{
-                color: var(--pinky);
-                letter-spacing: 2px;
-                transition: all .5s ease-out;
-                &:hover{
-                    letter-spacing: 0;
-                }
-            }
-            .inactive{
-                letter-spacing: 0;
-                transition: all .5s ease-out;
-                &:hover{
-                    letter-spacing: 2px;
-                }
-            }
-            a{
-                color: #fff;
-                transition: color .5s ease-out;
-                &:hover{
-                    color: var(--pinky);
-                }
-            }
-        }
-    }
-}
-.menu-burger{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.log-x-m{
-    img{
-        cursor: pointer;
-        transition: all .25s ease-in-out;
-        &:hover{
-            filter: grayscale(100%) brightness(70%) sepia(50%) hue-rotate(-100deg) saturate(150%) contrast(1);
-        }
-    }
-}
-    /*responsive*/
-    @media screen and (max-width: 900px) {
-        .menu-burger{
-            display: block;
-        }
-        .navbar{
-            margin: 0;
-        }
-        .log-x-m, .menu-burger{
-            margin: 30px 50px;
-        }
-        .nav-links{
-            position: absolute;
-            background-color: #021740;
-            backdrop-filter: blur(7px);
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3em;
-            margin-left: -100vw;
-            transition: all .5s ease-in-out;
-            ul{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                li{
-                    margin: 10px 0;
-                }
-            }
-        }
-        .mobile-menu{
-            margin-left: 0;
-        }
-    }
-    /*hover animation*/
-    .underline{
-        display: inline-block;
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--pinky);
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform .25s ease-out;
-        }
-        &:hover::after{
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    }
 /*Première partie*/
 #hommage{
     height: 100vh;
@@ -334,6 +151,25 @@ body{
     .tchalla{
         width: 25%;
         margin: 0 2.5%;
+        /*The button like stuff*/
+        .btn2{
+            justify-content: center;
+        }
+        h5{
+            text-align: center;
+            font-weight: bold; 
+            font-size: 2.5em; 
+            font-family: 'Texte';
+        }
+        h6{
+            background-color: #3D2DA6;
+            margin: 6% 2%;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: 'Texte';
+            font-size: 1em;
+        }
     }
 }
 .second, .third{
@@ -347,9 +183,8 @@ body{
     padding: 0 25px 20px;
     color: #021740;
     position: relative;
-    max-width: 350px;
     width: 100%;
-    min-width: 250px;
+    min-width: 300px;
     .portrait{
         position: absolute;
         top: -100px;
@@ -361,7 +196,7 @@ body{
     }
     .description2{
         text-align: center;
-        padding-top: 200px;
+        padding-top: 150px;
         .btn2{
             display: flex;
             margin: 0 auto;
@@ -448,6 +283,7 @@ form{
     border: 1px solid var(--general);
     display: none;
 }
+
 @media screen and (max-width: 900px) {
     .form{
         width: 70vw;
@@ -465,90 +301,6 @@ form{
             font-size: 2em;
             font-weight: 600;
         }
-    }
-}
-/*Footer*/
-footer{
-    height: max-content;
-    padding: 40px 0;
-    background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
-}
-.foot, .bottom, .copyright{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.point{
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: var(--pinky);
-    margin: 0 5px;
-}
-.bgimg{
-    margin-right: 5%;
-}
-.footer{
-    margin-left: 5%;
-}
-.img1{
-    position: relative;
-    transition: transform .5s ease-in-out;
-    z-index: 1;
-    &:hover{
-        transform: scale(1.1);
-    }
-    img{
-        width: 300px;
-    }
-    .img2{
-        position: absolute;
-        top: 150px;
-        left: 75px;
-        img{
-            width: initial;
-        }
-    }
-}
-.section1{
-    justify-content: space-between;
-    margin-bottom: 5%;
-    *{
-        color: #fff;
-    }
-}
-.media{
-    text-align: center;
-    img{
-        margin: 10px 5px 0;
-        transition: transform .25s ease-in-out;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-}
-/*Responsive*/
-@media screen and (max-width: 820px) { 
-    .foot{
-        display: block;
-        .img1{
-            width: 300px;
-            margin: 0 auto;
-        }
-    }
-    .section1{
-        h4{
-            margin-top: 10%;
-        }
-    }
-}
-@media screen and (max-width: 520px) { 
-    .foot{
-        font-size: .9em;
-    }
-    .bottom{
-        display: block;
-        text-align: center;
     }
 }
 

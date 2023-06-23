@@ -1,0 +1,129 @@
+/*Same as the Homepage*/
+/*to avoid copy and paste the same styles*/
+/*first things first*/
+@import "/styles/external-styles/default.css";
+/*then...*/
+@import "/styles/external-styles/navbar.css";
+/*...after that...*/
+@import "/styles/external-styles/fonts.css";
+/*...finaly*/
+@import "/styles/external-styles/footer.css";
+@import "/styles/external-styles/fadein.css";
+
+/*first section*/
+#city{
+    background: url('/images/Wakanda/Pantherwakanda1.png') 80% 20% no-repeat;
+    background-size: cover;
+    min-height: 300PX;
+    height: 100vh;
+}
+.ever{
+    margin: 0 10%;
+    padding: 10% 0;
+}
+.ever-title{
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+.ever-title h1{
+    font-family: 'Titre H2';
+    font-size: 4em;
+}
+.ever-title h2{
+    word-spacing: 40px;
+}
+.ever-text{
+    width: 40%;
+    text-align: justify;
+    background: linear-gradient(to right, transparent, rgba(128, 128, 128, 0.318), transparent);
+}
+.ever-text p{
+    font-size: 1.2em;
+}
+/*second section*/
+#origins{
+    display: flex;
+    margin: 5% 2%;
+    text-align: justify;
+    font-size: .9em;
+    background: url(/images/Wakanda/Pantherwakanda2.png) top center/90% no-repeat;
+}
+.leftpart{
+    margin: 0 2% 0 5%;
+    width: 50%;
+} 
+.rightpart{
+    margin: 0 5% 0 2%;
+    width: 50%;
+}
+.vidéo{
+ margin: 5% 0;
+}
+/*right part of */
+.chars{
+    text-align: center;
+    margin: 25px 0;
+}
+.chars img{
+    width: 70%;
+}
+
+/*responsive*/
+@media only screen and (min-width: 300px) and (max-width:900px){
+    #city{
+        background-position: 70% 20%;
+        height: 100vh;
+    }
+    .ever{
+        margin: 0 12%;
+        padding: 10% 0;
+    }
+    .ever-title{
+        margin-top: 100px;
+        margin-bottom: 25px;
+        line-height: 40px;
+    }
+    .ever-text{
+        width: 45%;
+        text-align: justify;
+    }
+    /*second section*/
+    #origins{
+        display: block;
+    }
+    .leftpart{
+        font-size: 1.3em;
+        margin: 0;
+        padding: 0 5%;
+        width: 100%;
+    } 
+    .rightpart{
+        font-size: 1.3em;
+        margin: 0;
+        padding: 0 5%;
+        width: 100%;
+    }
+    /*right part of */
+
+    .chars img{
+        width: 90%;
+    }
+    #city{
+        background-position: 70% 20%;
+        height: 100vh;
+    }
+    .ever{
+        margin: 0 12%;
+        padding: 30% 0;
+        justify-content: center;
+    }
+    .ever-title{
+        text-align: center;
+    }
+    .ever-text{
+        width: 60%;
+        font-size: 1.3em;
+        margin: auto;
+        background: linear-gradient(to right, transparent, rgba(118, 0, 186, 0.194), transparent);
+    }
+}
