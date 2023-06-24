@@ -1,155 +1,254 @@
-/*Same as the Homepage*/
-/*to avoid copy and paste the same styles*/
-/*first things first*/
-@import "/styles/external-styles/default.css";
-/*then...*/
-@import "/styles/external-styles/navbar.css";
-/*...after that...*/
-@import "/styles/external-styles/fonts.css";
-/*...finaly*/
-@import "/styles/external-styles/footer.css";
-@import "/styles/external-styles/fadein.css";
-
-/*style warrior bg*/
-#okoye{
-    background: url('/images/Enigme/Pantherenigme1.png') bottom left/100vh no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
-    height: 90vh;
+@charset "UTF-8";
+/*import external libs*/
+@import url(../styles/external-styles/default.css);
+@import url(../styles/external-styles/navbar.css);
+@import url(../styles/external-styles/footer.css);
+/*the fonts*/
+@font-face {
+  font-family: "Titre H1";
+  src: url(../fonts/panthera.otf);
 }
-    /*custom fonts a bit different from the imported one*/
-    .titre h1{
-        font-family: 'Titre h2';
-        font-size: 4em;
-    }
-.defi{
-    width: 50%;
-    PADDING: 15% 0 0 5%;
-    margin-left: 50%;
+@font-face {
+  font-family: "Titre H2";
+  src: url(../fonts/BEYNO.ttf);
 }
-.titre{
-    text-shadow: 2px 3px 5px rgb(0, 0, 0);
-    background: linear-gradient(to right,transparent, rgba(214, 9, 255, 0.104), transparent);
+@font-face {
+  font-family: "Enigme";
+  src: url(../fonts/WakandaForever-Regular.ttf);
 }
-.charade{
-    background: url(/images/Enigme/Pantherenigme2.png) center/90% no-repeat;
-    height: 100%;
+@font-face {
+  font-family: "texte";
+  src: url(../fonts/Cantarell-Regular.ttf);
 }
-.charade-text{
-    top: 0;
-    left: 0;
-    font-size: .9em;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-.charade p{
-    width: 71%;
-    text-align: justify;
-    font-size: 1.1em;
-    margin: auto;
-    padding: 15% 0;
+h1 {
+  font-family: "Titre H2";
+  font-size: 4em;
+  color: var(--pinky);
 }
 
-/*enigmatic textes*/
-#enigme{
-    margin: 10% 5%;
+h2 {
+  font-family: "Titre H2";
+  font-size: 2.6em;
+  color: var(--pinky);
+}
+
+p {
+  font-family: "texte";
+  font-size: 1.3em;
+}
+
+q {
+  font-family: "texte";
+  font-size: 1em;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "texte";
+  font-size: 4em;
+}
+
+.btn {
+  font-family: "texte";
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "texte";
+  font-size: 1.8em;
+  letter-spacing: 4px;
+}
+
+span {
+  font-family: "Enigme";
+}
+
+/*The bgs*/
+body {
+  background: #11213F url("../images/Allpages/arrière_plan.png") no-repeat;
+  background-size: cover;
+  font-size: 12px;
+  color: white;
+  overflow-x: hidden;
+}
+
+footer {
+  height: max-content;
+  padding: 40px 0;
+  background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
+}
+
+/*First section*/
+#okoye {
+  height: 100vh;
+  background: url(../images/Enigme/Pantherenigme1.png) 5% 10px/50vw no-repeat, url(../images/Enigme/Pantherenigme3.png) 100% 90%/100% no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.vide {
+  width: 60%;
+}
+
+.defi {
+  width: 40%;
+  text-align: justify;
+}
+.defi .titre {
+  width: 100%;
+  max-width: 440px;
+}
+.defi .charade {
+  width: 90%;
+  min-width: 280px;
+  font-size: 0.9em;
+  padding: 60px 40PX;
+  background: url(../images/Enigme/Pantherenigme2.png) center/100% no-repeat;
+}
+
+/*Second section*/
+#enigme {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  margin: 0 75px;
+}
+
+.guess {
+  width: 70%;
+}
+.guess .guess1 {
+  word-spacing: 15px;
+  letter-spacing: 5px;
+  font-size: 1.7em;
+  color: var(--pinky);
+}
+.guess .transcription {
+  margin-top: 30px;
+  width: 50%;
+  min-width: 280px;
+}
+.guess .transcription p {
+  letter-spacing: 2px;
+}
+.guess .answer {
+  margin-top: 50px;
+}
+.guess .answer input {
+  background: transparent;
+  margin: 5px 0;
+  width: 450px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-family: "Texte";
+  border: 2px solid var(--button);
+  color: var(--button);
+}
+.guess .answer button {
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 38px;
+  margin: 7px auto;
+  background-color: var(--button);
+  border: none;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s all ease-out;
+}
+.guess .answer button:hover {
+  filter: drop-shadow(0 0 7px #F2CEF2);
+  color: var(--general);
+}
+
+.did-you-know {
+  width: 30%;
+  text-align: center;
+  margin: auto 0;
+}
+.did-you-know .fact {
+  padding: 25px;
+  background: url(../images/Enigme/Pantherenigme2.png) center/100% no-repeat;
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+  #okoye {
+    height: 105vh;
+    background: url(../images/Enigme/Pantherenigme1.png) top center/95vw no-repeat, url(../images/Enigme/Pantherenigme3.png) bottom left/100% no-repeat;
     display: flex;
-    position: relative;
-}
-/*left part*/
-.guess{
-    width: 70%;
-}
-.guess1{
-    color: var(--pinky);
-    font-size: 2.6em;
-    word-spacing: 10px;
-}
-.transcription{
-    margin: 10% 0;
-}
-/*formulaire*/
-input{
-    background: none;
-    margin: 1% 0 5% 0;
-    width:  100%;
-    height: 56px;
-    border: 2px solid var(--button);
-    border-radius: 30px;
-    padding: 10px 10px;
-    color: var(--pinky);
-}
-input:focus{
-    outline: none;
-}
-    /*real button*/
-    .btn{
-        width: 150px;
-        padding: 10px 0;
-        border-radius: 38px;
-        background-color: var(--button);
-        text-align: center;
-        margin: auto;
-        transition: .5s all ease-in-out;
-    }
-    .btn:hover{
-        filter: drop-shadow(0 0 10px #F2CEF2);
-    }
-    .btn a{
-        color: var(--general);
-    }
-/*right part... le savais-tu?*/
-.did-you-know{
-    text-align: center;
-    margin: auto 5%;
-    width: 50%;
-}
-.fact{
-    background: url('/images/Enigme/Pantherenigme2.png') center/100% no-repeat;
-    padding: 8%;
+    align-items: center;
+  }
+  .vide {
+    display: none;
+  }
+  .defi {
+    padding-top: 350px;
     width: 100%;
+  }
+  .defi .titre {
+    text-align: center;
+    margin: 0 auto 3%;
+    width: 70%;
+    font-size: 0.9em;
+    background: linear-gradient(to right, transparent, rgba(96, 14, 110, 0.4392156863), transparent);
+  }
+  .defi .charade {
+    text-align: center;
+    margin: 0 auto 0;
+    width: 70%;
+    min-width: 280px;
+    font-size: 0.9em;
+    padding: 30px 40PX;
+    background: url(../images/Enigme/Pantherenigme2.png) center/100% no-repeat;
+    text-shadow: 0 0 1px 4px rgba(8, 13, 23, 0.8117647059);
+  }
+}
+@media screen and (max-width: 720px) {
+  #okoye {
+    height: 110vh;
+  }
+}
+@media screen and (max-width: 620px) {
+  .defi .charade {
+    width: 100%;
+    background: none;
+    font-size: 1em;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 520px) {
+  #okoye {
+    height: 135vh;
+  }
+}
+@media screen and (max-width: 900px) {
+  #enigme {
+    height: 135vh;
+  }
+  #enigme .container {
+    display: block;
+    margin: 0 5%;
+  }
+  .guess {
+    width: 100%;
+  }
+  .guess .answer input {
+    width: 100%;
+  }
+  .guess .div {
+    text-align: center;
+  }
+  .did-you-know {
+    margin: 10% auto 0;
+    max-width: 400px;
+    width: 100%;
+  }
 }
 
-/*responsive*/
-@media only screen and (min-width: 300px) and (max-width:900px){
-    #okoye{
-        background: url('/images/Enigme/Pantherenigme1.png') 50% 25%/100% no-repeat, url('/images/Enigme/Pantherenigme3.png') bottom right/90vh no-repeat;
-    }
-    .defi{
-        width: 80%;
-        padding-top: 60%;
-        margin-left: 0;
-        font-size: 1.5em;
-    }
-    /*right part... le savais-tu?*/
-    #enigme{
-        display: block;
-        margin-top: 25%;
-    }
-    /*first part*/
-    .guess{
-        width: 90%;
-        font-size: 1.3em;
-    }
-    /*second part*/
-    .did-you-know{
-        padding: 50px 0;
-        text-align: center;
-        width: 90%;
-        font-size: 1.2em;
-    }
-    .fact{
-        background: url('/images/Enigme/Pantherenigme2.png') center/90% no-repeat;
-        padding: 15%;
-    }
-    /*INPUT AND BUTTON*/
-    input{
-        height: 36px;
-        border-radius: 20px;
-        padding: 12px 10px;
-    }
-    .btn{
-        width: 100px;
-        padding: 10px 0;
-        border-radius: 38px;
-        transition: .5s all ease-in-out;
-        font-size: 1.6em;
-    }
-}
+/*# sourceMappingURL=enigme.css.map */

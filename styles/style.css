@@ -62,7 +62,7 @@ h4 {
 
 /*The bgs*/
 body {
-  background: url("../images/Allpages/arrière_plan.png") no-repeat;
+  background: #11213F url("../images/Allpages/arrière_plan.png") no-repeat;
   background-size: cover;
   font-size: 12px;
   color: white;
